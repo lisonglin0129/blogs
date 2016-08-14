@@ -1,0 +1,207 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="x-ua-compatible" content="ie=7" />
+<title>帮助中心-中国统一教育网</title>
+<link href="css/lig_help.css" rel="stylesheet" type="text/css" />
+<script src="js/jquery-1.5.2.min.js"></script>
+<script src="js/sfp_new.js"></script>
+<script src="js/swfobject.js"></script>
+<script type="text/javascript" src="js/flowplayer-3.2.11.min.js"></script>
+<script type="text/javascript" src="js/playerconf.js"></script>
+<script type="text/javascript" language="javascript">
+ 
+function display(v)
+{
+	var obj = document.getElementById(v);
+	if(obj.style.display=="none")
+	{
+		obj.style.display="block";
+	}else{
+		obj.style.display="none";
+	}
+}
+function open(v)
+{
+	var obj = document.getElementById(v);
+	obj.style.display="block";
+}
+</script>    
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+</head>
+<body>
+<div class="shangtiao">
+<span>今天是2016年07月18日 星期一</span>
+<a href="http://www.tongyi.com/kfonline.php" target="_blank">在线客服</a>  
+<a href="/index.php/help/get_thread_list/?listid=45">帮助中心</a> 
+<a href="http://vote.tongyi.com/" target="_blank">意见反馈</a> | 
+<a title="点击右键，选择“另存为”，把快捷方式保存到桌面" href="/index.php/about/shortcut" target="_self">设为桌面图标</a>
+<a onclick="addfavorite()" href="javascript:void(0)" target="_self">收藏本站</a>
+<a onclick="setHomepage(this)" href="javascript:void(0)" target="_self">设为首页</a>
+</div>
+<div class="logotiao"><span><img src="images/helptu_08.gif" /></span><a href="http://www.tongyi.com/"><img src="images/logo.png" style="margin:10px 0 0" title="中国统一教育网" border="0" /></a><img src="images/helptu_06.gif" / title="帮助中心"></div>
+<div class="sousuo">
+<ul style="list-style-type:none">
+<li class="sousuo_1"></li>
+<li class="sousuo_2"><img src="images/helptu_12.gif" / title="问题搜索"></li>
+<li class="sousuo_3"><div class="sousuo_3_1"><img src="images/sousuo_1.gif" />
+<form name="form" action="http://www.tongyi.com/index.php/help/search" method="get">
+  <input name="key" id='key' type="text"  class="sousuo_3_2" value="请输入搜索的内容" onclick="document.getElementById('key').value=''">
+<!--  <input type="submit" width=0 height=0 />-->
+
+  <span><a href="#"><img src="images/sousuo_2.gif" onclick="form.submit();" title="搜索"/></a></span></div>
+  </form>
+</li>
+<li class="sousuo_4"></li>
+</ul>
+</div>
+<div class="zhutik" style="overflow:hidden;">
+<div class="zhutikle">
+  <div class="zhutikle1">帮助分类</div>  
+  <div class="zhutikle2">
+  <dl>
+   <dt id="zuocedldq"><a href="#" title="使用流程" onclick="display('dl_11');">使用流程</a>
+  <dd id="dl_11" style="display:none;">
+  <ul>
+             <li id="zcejfldq"><a href="http://www.tongyi.com/index.php/help/get_thread_list/?listid=14" title="注册" >注册</a></li>
+             <li><a href="http://www.tongyi.com/index.php/help/get_thread_list/?listid=22" title="登录" >登录</a></li>
+             <li><a href="http://www.tongyi.com/index.php/help/get_thread_list/?listid=23" title="充值" >充值</a></li>
+             <li><a href="http://www.tongyi.com/index.php/help/get_thread_list/?listid=24" title="购买服务" >购买服务</a></li>
+             <li><a href="http://www.tongyi.com/index.php/help/get_thread_list/?listid=72" title="试用申请" >试用申请</a></li>
+    </ul>
+  </dd>
+ </dt>
+    <dt id="zuocedldq"><a href="#" title="网站功能" onclick="display('dl_12');">网站功能</a>
+  <dd id="dl_12" style="display:none;">
+  <ul>
+             <li><a href="http://www.tongyi.com/index.php/help/get_thread_list/?listid=25" title="知学爱问" >知学爱问</a></li>
+             <li><a href="http://www.tongyi.com/index.php/help/get_thread_list/?listid=26" title="名师答疑" >名师答疑</a></li>
+             <li><a href="http://www.tongyi.com/index.php/help/get_thread_list/?listid=27" title="会员中心" >会员中心</a></li>
+             <li><a href="http://www.tongyi.com/index.php/help/get_thread_list/?listid=28" title="作文平台" >作文平台</a></li>
+             <li><a href="http://www.tongyi.com/index.php/help/get_thread_list/?listid=71" title="智能题库" >智能题库</a></li>
+    </ul>
+  </dd>
+ </dt>
+    <dt id="zuocedldq"><a href="#" title="常见问题" onclick="display('dl_13');">常见问题</a>
+  <dd id="dl_13" style="display:none;">
+  <ul>
+             <li><a href="http://www.tongyi.com/index.php/help/get_thread_list/?listid=31" title="登录常见问题" >登录常见问题</a></li>
+             <li><a href="http://www.tongyi.com/index.php/help/get_thread_list/?listid=32" title="观看常见问题" >观看常见问题</a></li>
+             <li><a href="http://www.tongyi.com/index.php/help/get_thread_list/?listid=33" title="密码相关问题" >密码相关问题</a></li>
+             <li><a href="http://www.tongyi.com/index.php/help/get_thread_list/?listid=34" title="积分相关说明" >积分相关说明</a></li>
+             <li><a href="http://www.tongyi.com/index.php/help/get_thread_list/?listid=35" title="在线客服使用说明" >在线客服使用说明</a></li>
+             <li><a href="http://www.tongyi.com/index.php/help/get_thread_list/?listid=39" title="财富系统相关问题" >财富系统相关问题</a></li>
+             <li><a href="http://www.tongyi.com/index.php/help/get_thread_list/?listid=40" title="我的成长计划相关问题" >我的成长计划相关问题</a></li>
+             <li><a href="http://www.tongyi.com/index.php/help/get_thread_list/?listid=41" title="小秘书相关问题" >小秘书相关问题</a></li>
+             <li><a href="http://www.tongyi.com/index.php/help/get_thread_list/?listid=42" title="机器人爸爸相关问题" >机器人爸爸相关问题</a></li>
+             <li><a href="http://www.tongyi.com/index.php/help/get_thread_list/?listid=43" title="知学爱问相关问题" >知学爱问相关问题</a></li>
+             <li><a href="http://www.tongyi.com/index.php/help/get_thread_list/?listid=45" title="作文平台相关问题" >作文平台相关问题</a></li>
+             <li><a href="http://www.tongyi.com/index.php/help/get_thread_list/?listid=46" title="智能建站相关问题" >智能建站相关问题</a></li>
+             <li><a href="http://www.tongyi.com/index.php/help/get_thread_list/?listid=47" title="常用软件安装问题" >常用软件安装问题</a></li>
+    </ul>
+  </dd>
+ </dt>
+    <dt id="zuocedldq"><a href="#" title="使用教程" onclick="display('dl_52');">使用教程</a>
+  <dd id="dl_52" style="display:none;">
+  <ul>
+             <li><a href="http://www.tongyi.com/index.php/help/get_thread_list/?listid=64" title="知学爱问使用说明" >知学爱问使用说明</a></li>
+             <li><a href="http://www.tongyi.com/index.php/help/get_thread_list/?listid=63" title="会员中心功能说明" >会员中心功能说明</a></li>
+             <li><a href="http://www.tongyi.com/index.php/help/get_thread_list/?listid=70" title="智能建站使用说明" >智能建站使用说明</a></li>
+             <li><a href="http://www.tongyi.com/index.php/help/get_thread_list/?listid=61" title="主站使用说明" >主站使用说明</a></li>
+             <li><a href="http://www.tongyi.com/index.php/help/get_thread_list/?listid=66" title="作文平台使用说明" >作文平台使用说明</a></li>
+             <li><a href="http://www.tongyi.com/index.php/help/get_thread_list/?listid=68" title="财富系统使用说明" >财富系统使用说明</a></li>
+             <li><a href="http://www.tongyi.com/index.php/help/get_thread_list/?listid=135" title="新首页介绍使用说明"  style="color:#F00">新首页介绍使用说明</a></li>
+    </ul>
+  </dd>
+ </dt>
+ <!--
+	<dt id="zuocedldq"><a href="#" title="使用流程" onclick="disp2(mm55)">使用流程</a>
+	          <dd ><a href="#" title="注册">注册</a></dd>
+		  <dd id="zcejfldq"><a href="#" title="登录">登录</a></dd>
+		  <dd ><a href="#" title="注册">注册</a></dd>
+		  <dd ><a href="#" title="注册">注册</a></dd>
+		  <dd ><a href="#" title="注册">注册</a></dd>
+	</dt>
+	 <dt><a href="#" title="网站功能">网站功能</a></dt>
+	 <dt><a href="#" title="常见问题">常见问题</a></dt>
+-->
+	 <dt><a href="http://member.tongyi.com/index.php/service/pay/" title="资费说明">资费说明</a></dt>
+	  <dt><a href="http://www.tongyi.com/index.php/about/software" title="必备软件">必备软件</a></dt>
+      
+	  <dt><a href="http://www.tongyi.com/kfonline.php" title="在线客服">在线客服</a></dt>
+  </dl>
+<script type="text/javascript" language="javascript">
+//display('dl_11');
+open('dl_11');
+</script>     
+  </div>
+  <div class="zhutikle3"></div>
+  <div class="zhutikle4"><a href="http://www.tongyi.com/kfonline.php"><img src="images/helptu_30.gif"  title="询问客服"/></a></div>
+</div>
+<div class="zhutikri" style="overflow:hidden">
+  <div class="zhutikri1"><a href="http://www.tongyi.com/index.php/help">帮助中心首页</a> &gt;&gt; <a href='#'onclick="display('dl_11');">使用流程</a> &gt;&gt; <a href='http://www.tongyi.com/index.php/help/get_thread_list/?listid=14'>注册</a></div>
+  <div class="zhutikri2">
+	<ul>
+	    			<li><a href="http://www.tongyi.com/index.php/help/content/?id=30&listid=14" title="如何注册" target="_blank">如何注册</a></li>
+        		</ul>
+      <div class="fenye"></div>
+
+<!--测试视频
+<div class="div_bof" id='showplayer' style="display:none">
+            <div id="player" style="width:544px;height:360px;background:#000;"></div>
+            <script type="text/javascript">
+				var studyTime = 0;
+				var studyId = 0;
+				var player = null;
+				var parameters = {
+									id: "1",
+									src: "",
+									autoPlay: "true",
+									width: "544",
+									height: "360",
+									controlBarAutoHide:"true",
+									verbose:"true",
+									urlIncludesFMSApplicationInstance:"true",
+									javascriptCallbackFunction:"onJavaScriptBridgeCreated"
+								  };
+				function onJavaScriptBridgeCreated(playerId)
+				{
+					if(player == null){
+						player = document.getElementById(playerId);
+						视频时长
+						player.addEventListener("durationChange", "onDurationChange");
+					}
+				}
+</script> 
+</div>
+          
+<div class="class_list" style="height:880px;">
+<div class="vid_gkone"> <a href="javascript:startplay('4074')" id="video_4074" title=""  class="vid_gksp">
+<img src="images/gkzw_sp1.jpg" width="140" height="100"/></a> 
+<a href="javascript:startplay('4074')" id="video_4074txt"  class="vid_gktxt">视频图片地址</a> </div>          
+
+<div class="vid_gkone"> <a href="javascript:startplay('4075')" id="video_4075" title=""  class="vid_gksp">
+<img src="images/chuange10.jpg" width="140" height="100"/></a> 
+<a href="javascript:startplay('4075')" id="video_4075txt"  class="vid_gktxt">测试名称地址</a> </div>
+</div>-->
+              
+  </div>
+  <div class="zhutikri3"></div>
+</div>
+</div>
+
+
+<div class="yeweik"  style=" overflow:hidden">
+<span class="yeweik_1"></span>
+<span class="yeweik_3" ></span>
+<br />中国统一教育网 帮助中心<br />
+Copyright <span>©</span> 2008 - 2016 tongyi.com Inc. All Rights Reserved.
+
+</div>
+<!--客服在线-->
+<script type="text/javascript" src="other/.com/?id=1582020"></script>
+<!--客服在线end-->
+</body>
+</html>

@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta charset="UTF-8">
+    <title>统一教育网</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1"/>
+    <meta name="description" content="统一教育网">
+    <meta name="keywords" content="统一教育网">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/modular.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/jquery.SuperSlide.2.1.1.js"></script>
+    <script type="text/javascript" src="js/myfocus1.js"></script>
+    <script type="text/javascript" src="js/jquery.nav.js"></script>
+    <!–[if lt IE 9]><script src="js/html5shiv.min.js"></script><![endif]–>
+    <script type="text/javascript" src="js/modular.js"></script>
+    <script type="text/javascript" src="js/wow.min.js"></script>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/jquery.validate.js" ></script>
+<script type="text/javascript" src="js/city.js" ></script>
+<script type="text/javascript" src="js/onloadlistener.js" ></script>
+<script>
+	function change_valicode(){
+		d = new Date();
+		$("#valpic").attr("src","other/.php/valicode/get_valicode/?"+d.getTime());
+	}
+
+    $(document).ready(function(){
+		jQuery.validator.addMethod("legal", function(value, element) {        
+		  return this.optional(element) || (/([\u4e00-\u9fa5a-zA-Z]+[0-9]*){4,15}$/.test(value));    
+		}, "用户名不合法。"); 
+		$(".form1").validate({
+				rules:{
+						member_id:{
+							required:true,
+							rangelength:[4,15],
+							legal:true,
+							remote: {
+								url: "http://member.tongyi.com/index.php/register/check_member_id",     //后台处理程序
+								type: "post",              //数据发送方式    
+								dataType:"json",
+								data: {                     //要传递的数据
+									member_id: function() {
+										return $("#member_id").val();
+									},
+									ajax:1
+								}
+							}
+						},
+						password: {
+							required:true,
+							rangelength:[4,16]
+						},
+						password2: {
+								equalTo:"#password"
+						},
+						//member_city_sheng:{
+						//	required:true
+						//},
+						//member_city_shi:{
+						//	required:true
+						//},
+						member_city_xian:{
+							required:true
+						},
+						member_name:{
+							required:true
+						},
+						member_grade:{
+							required:true
+						},
+						valicode:{
+							required:true,
+							remote: {
+								url: "http://member.tongyi.com/index.php/register/check_valicode",     //后台处理程序
+								type: "post",               //数据发送方式    
+								dataType:"json",
+								data: {                     //要传递的数据
+									valicode: function() {
+										return $("#valicode").val();
+									},
+									ajax:1
+								}
+							}
+						},
+						accept:{
+							required:true
+						}
+				},
+				messages:{
+						member_id: {
+							required: '用户名必须填写。',
+							rangelength: '用户名的长度为4-15个字符。',
+							remote:'用户名已经存在。'
+						},
+						password: {
+							required: '密码必须填写。',
+							rangelength: '密码长度为4-16个字符串。'
+						},
+						password2: {
+							equalTo: '输入值必须和密码相同。'
+						},
+						//member_city_sheng:{
+						//	required: '请选择省。'
+						//},
+						//member_city_shi:{
+						//	required: '请选择市。'
+						//},
+						member_city_xian:{
+							required: '城市必须选择。'
+						},
+						member_name:{
+							required: '姓名必须填写。'
+						},
+						member_grade:{
+							required: '年级必须填写。'
+						},
+						valicode:{
+							required:'请输入验证码。',
+							remote:'验证码输入错误。'	
+						},
+						accept:{
+							required:'您还没有阅读并接受协议。'
+						}
+				},
+				errorPlacement: function(error, element) {
+                                   
+					element.next().removeClass();
+					element.next().addClass("wrong");
+					element.next().html(error);
+				 },
+				 success: function(label) {
+					label.parent().removeClass();
+                                        label.html('输入正确');
+					//label.html('<img src="images/dot_right.gif" align="absmiddle" border="0" style="margin-left:25px;" />');
+				}
+
+			});			   					   
+});
+
+
+    //城市
+	var oApply_province;
+	var oApply_city;
+	var oApply_area;
+	
+	function loadCity(){
+		oApply_province = document.getElementById("member_city_sheng");
+		oApply_city = document.getElementById("member_city_shi");
+		oApply_area = document.getElementById("member_city_xian");
+	}
+	function addCity(){
+		//alert(oCity);
+		//alert(oApply_province);
+		
+		for(city in oCity)
+		{
+			if(oCity[city][1] == '1')
+			{
+				add_option(oApply_province,oCity[city],city);
+			}
+		}
+	}
+	function add_option(oSelect,oOption,key)
+	{
+		var option = document.createElement("OPTION");
+		var txt    = document.createTextNode(oOption[0]);
+		option.value = key
+		option.appendChild(txt);
+		oSelect.appendChild(option);
+	}
+	function clean_option(oSelect,caption){
+		while(oSelect.firstChild){
+			oSelect.firstChild.parentNode.removeChild(oSelect.firstChild);
+		}
+		var tmp = new Array();
+		tmp[0] = caption;
+		add_option(oSelect,tmp,'');
+	}
+	function change_city(){
+		var province = oApply_province.value;
+		clean_option(oApply_city,'市');
+		for(city in oCity)
+		{
+			if(oCity[city][1] == province)
+			{
+				add_option(oApply_city,oCity[city],city);
+			}
+		}
+	}
+	function change_area(){
+		var parent = oApply_city.value;
+		clean_option(oApply_area,'县（区）');
+		for(city in oCity)
+		{
+			if(oCity[city][1] == parent)
+			{
+				add_option(oApply_area,oCity[city],city);
+			}
+		}
+	}
+
+	window.addOnLoadListener(loadCity);
+	window.addOnLoadListener(addCity);
+	
+	function showbubble(){
+		$(".tx_talk").show().delay(5000).hide(0);	
+	}
+</script>
+</head>
+<body>
+<header class="header_login">
+    <div class="head_lg clearfix">
+        <div class="logo fll"><a href="http://www.tongyi.com/"><img src="images/logo_lg.png" alt="统一教育网LOGO" width="230" height="63"/></a></div>
+               <div class="nav_login flr">
+                        <a href="http://member.tongyi.com/index.php/login/index">登录</a>|
+             
+            <a href="http://member.tongyi.com/index.php/register/index/?from=http%3A%2F%2Fwww.tongyi.com%2F">注册</a>|
+            <a href="http://www.tongyi.com/index.php/help">帮助中心</a>|
+            <a href="http://www.tongyi.com/">返回首页</a>|
+            <a href="http://www.tongyi.com/kfonline.php">在线客服</a>
+        </div>
+    </div>
+</header>
+<div class="content_lg prel">
+    <div class="cloud01 pabs"></div>
+    <div class="cloud02 pabs"></div>
+    <div class="w1200 margin-auto-c lgCon">
+        <div class="login-rqq01 pabs lgBox wow bounceInLeft" data-wow-duration="2s"></div>
+        <div class="login-rqq02 pabs  wow bounceInDown" data-wow-duration="2s"></div>
+        <div class="login-light pabs wow pulse" data-wow-duration="2s"></div>
+        <div class="login-title pabs wow bounceInUp"></div>
+            <div class="w1200 margin-auto-c regCon">
+                <div class="regBox wow bounceInRight" data-wow-delay="0.5s">
+                    <div class="formTit-reg">
+                        <div class="formTit-con-reg">
+                            <p class="p1">用户注册</p>
+                        </div>
+                    </div>
+                    <form action="http://member.tongyi.com/index.php/register/register_new" method="post" class="form1" id="register_ty">
+                                                          <dl class="clearfix">
+                            <dt>用户名：</dt>
+                             <input type="hidden" name="rurl" id="rurl" value="http%3A%2F%2Fwww.tongyi.com%2F" />
+                            <dd class="prel"><input  name="member_id" id="member_id" type="text" placeholder="4 -15个字符（必须数字与字母组合）" class="ipt"><span class="red padding_l5">*</span></dd>
+                            
+                        </dl>
+                           
+                        <dl class="clearfix">
+                            <dt>密码：</dt>
+                            <dd class="prel"><input name="password" id="password" type="password" placeholder="4 -16个字符" class="ipt"><span class="red padding_l5">*</span></dd>
+                        </dl>
+                        <dl class="clearfix">
+                            <dt>城市：</dt>
+                            <dd class="prel">
+                                <select id="member_city_sheng" name="member_city_sheng"  onchange="change_city();" class="margin_r30">
+                                    <option value="">省</option>
+                     
+                                </select>
+                                <select id="member_city_shi" name="member_city_shi" onchange="change_area();" class="margin_r30">
+                                    <option value="">市</option>
+                            
+                                </select>
+                                <select id="member_city_xian" name="member_city_xian" >
+                                    <option value="">区/县</option>
+                                </select>
+                                <span class="red padding_l5">*</span>
+                            </dd>
+                        </dl>
+                        <dl class="clearfix">
+                            <dt>姓名：</dt>
+                            <dd class="prel"><input type="text" placeholder="" name="member_name" id="member_name" class="ipt"><span class="red padding_l5">*</span></dd>
+                        </dl>
+                        <dl class="clearfix">
+                            <dt>年级：</dt>
+                            <dd class="prel">
+                                <select id="member_grade" name="member_grade" class="grade">
+                                    <option value="">请选择年级</option>
+                                          <option value="7">幼儿</option>
+                                            <option value="3">小学</option>
+                                            <option value="4">初中</option>
+                                            <option value="5">高中</option>
+                                            <option value="6">其他</option>
+                                </select>
+                                <span class="red padding_l5">*</span>
+                            </dd>
+                        </dl>
+                        <dl class="clearfix">
+                            <dt>手机号：</dt>
+                            <dd class="prel"><input type="text" name="member_tel" id="member_tel" placeholder="" class="ipt"><!--<span class="red padding_l5">*</span>--></dd>
+                        </dl>
+                        <dl class="clearfix">
+                            <dt>E-mail：</dt>
+                            <dd class="prel"><input type="text" name="email" id="email" placeholder="此E-mail用于找回密码" class="ipt"></dd>
+                        </dl>
+                        <dl class="clearfix">
+                            <dt>验证码：</dt>
+                            <dd class="dd-yzm clearfix prel"><input type="text" placeholder="" name="valicode" id="valicode" class="ipt3 fll" maxlength="4"><span class="fll"></span></dd>
+                        </dl>
+                           <dl class="clearfix">
+                            <dt> </dt>
+                            <dd class="dd-yzm clearfix prel"><i class="fll"><img id="valpic" src="other/.php/valicode/get_valicode/" alt="验证码"></i><a href="javascript:void (0)" onclick="change_valicode();return false;" class="ft12 blue fll">看不清，换一张？</a></dd>
+                        </dl>
+                        <dl class="clearfix">
+                            <dt></dt>
+                            <dd class="check_reg clearfix"><input type="checkbox" placeholder="" checked="checked" class="fll" id="check"><label for="check" class="cur-p fll"> 我已阅读并同意</label> <a href="http://member.tongyi.com/index.php/register/treaty" target="_blank" class="blue fll">《服务协议》</a></dd>
+                        </dl>
+                        <p><input type="submit" value="注 册"></p>
+                        <ul>
+                            <li>注册遇到问题？ <a href="http://chat1.5251.net/jsp_admin/client/client_green.jsp?flag=1&companyId=23474&style=49164&username=&refer=" class="blue">联系在线客服帮您解决>></a></li>
+                            <li>已经注册过了？现在 <a href="http://member.tongyi.com/index.php/login" class="blue">立即登录>></a></li>
+                            <li><a href="http://www.tongyi.com/index.php/probation" class="blue">申请试用账号>></a></li>
+                        </ul>
+
+                    </form>
+
+                </div>
+            </div>
+    </div>
+</div>
+
+
+
+
+
+
+<footer class="footer_lg">
+    <div class="containLg footer_lg clearfix">
+        <div class="footer_lg_l fll"><a href="javascript:void(0)"><img src="images/logo_bm_lg.jpg" ></a></div>
+        <div class="footer_lg_r fll">
+            <p>
+                <a href="http://www.tongyi.com/index.php/about">统一教育网简介</a>|
+                <a href="http://member.tongyi.com/index.php/service/pay/">服务价格说明</a>|
+                <a href="http://www.tongyi.com/index.php/about?ln=val">产品价值</a>|
+                <a href="http://www.tongyi.com/index.php/about?ln=corp">合作企业</a>|
+                <a href="http://www.tongyi.com/index.php/about?ln=zp">人才招聘</a>|
+                <a href="http://www.tongyi.com/index.php/about?ln=cprt">版权声明</a>|
+                <a href="http://www.tongyi.com/index.php/about?ln=contact">联系我们</a>|
+                <a href="http://www.tongyi.com/honor/index.html">企业荣誉</a>|
+                <a href="http://agent.tongyi.com/agent-test/login.php">财富系统</a>|
+                <a href="http://www.tongyi.com/alliance/index.php">联盟合作</a>|
+                <a href="http://www.tongyi.com/complain/index.php">客服反馈中心</a>|
+                <a href="http://www.tongyi.com/sitemap/">网站地图</a>
+            </p>
+            <p>Copyright © 2008 - 2016 tongyi.com Inc. All Rights Reserved.</p>
+        </div>
+    </div>
+</footer>
+
+
+</body>
+</html>

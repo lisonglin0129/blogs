@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta charset="UTF-8">
+    <title>统一教育网</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1"/>
+    <meta name="description" content="统一教育网">
+    <meta name="keywords" content="统一教育网">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/modular.css?3469">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <script type="text/javascript" src=" js/jquery.min.js"></script>
+<script type="text/javascript" src="js/qc_loader.js" data-appid="100325051" data-redirecturi="http://member.tongyi.com/qc_callback.html" charset="utf-8"></script>
+<script type="text/javascript">
+    
+   /* $(function(){ 
+		document.onkeydown = function(e){ 		
+		var ev = document.all ? window.event : e; 		
+		if(ev.keyCode==13) { 		
+		$("#lg_ty").submit();		
+		} 		
+		} 		
+	}); */
+		function toQzoneLogin()
+		{      
+			var A=window.open("http://www.tongyi.com/index.php/qqlogin/gologin","TencentLogin","width=450,height=320,menubar=0,scrollbars=1, resizable=1,status=1,titlebar=0,toolbar=0,location=1");
+		} 
+
+$(function(){
+	
+	$('#member_id').focus(function(){
+		
+		if($('#member_id').val()=="用户名/手机号码")
+		{
+			$('#member_id').val('');
+			$("#member_id").css("color","#000");
+		}
+		
+		});
+                
+                
+	
+	});
+        $(document).ready(function(e){ 
+            $('input').focus(function(){
+                
+                    /*
+                    $(document).keydown(function(e){ 
+                 
+                            if(e.keyCode == 13){
+                                     return false;
+                            }
+                    })
+                    */
+            })
+               $('input').blur(function(e){ 
+                    $(document).keydown(function(e){ 
+                        if(e.keyCode == 13){ 
+                           if(!$("#name").val()){ 
+                               alert('请输入用户名')
+                               return false;
+                            }
+                            if(!$("#pass").val()){ 
+                               alert('请输入密码')
+                               return false;
+                            }
+                           $("#lg_ty").submit();
+                        }
+                    })
+            })
+
+}) 
+     /*   $('input').focus(function(e){ 
+            $(document).keydown(function(e){ 
+                if(e.keyCode == 13){ 
+                    alert('1');
+                    return false;
+                }
+            })
+        })*/
+        
+       /* $('input').blur(function(e){ 
+            $(document).keydown(function(e){ 
+                if(e.keyCode == 13){ 
+                   $("#lg_ty").submit();
+                }
+            })
+        })
+*/        
+</script>
+
+</head>
+<body>
+<header class="header_login">
+    <div class="head_lg clearfix">
+        <div class="logo fll"><a href="http://www.tongyi.com/"><img src="images/logo_lg.png" alt="统一教育网LOGO" width="230" height="63"/></a></div>
+        <div class="nav_login flr">
+                        <a href="http://member.tongyi.com/index.php/login/index">登录</a>|
+             
+            <a href="http://member.tongyi.com/index.php/register/index/?from=http%3A%2F%2Fwww.tongyi.com%2F">注册</a>|
+            <a href="http://www.tongyi.com/index.php/help">帮助中心</a>|
+            <a href="http://www.tongyi.com/">返回首页</a>|
+            <a href="http://www.tongyi.com/kfonline.php">在线客服</a>
+        </div>
+    </div>
+</header>
+<div class="content_lg prel">
+    <div class="cloud01 pabs"></div>
+    <div class="cloud02 pabs"></div>
+    <div class="w1200 margin-auto-c lgCon">
+        <div class="login-rqq01 pabs lgBox wow bounceInLeft" data-wow-duration="2s"></div>
+        <div class="login-rqq02 pabs  wow bounceInDown" data-wow-duration="2s"></div>
+        <div class="login-light pabs wow pulse" data-wow-duration="2s"></div>
+        <div class="login-title pabs wow bounceInUp"></div>
+        <div class="lgBox wow bounceInRight" data-wow-delay="0.1s">
+            <div class="formTit">
+                <div class="formTit-con">
+                    <p class="p1">用户登录</p>
+                </div>
+            </div>
+            <form action="http://member.tongyi.com/index.php/login/login_new/" method="post" id="lg_ty">
+                                <dl class="clearfix margin_b15">
+                    <dt class="lg-row1"></dt>
+                    <dd><input type="text" placeholder="用户名" name="member_id" class="ipt" id='name'></dd>
+                </dl>
+                <dl class="clearfix">
+                    <dt class="lg-row2"></dt>
+                    <dd><input type="password" name="password" placeholder="密码" class="ipt" id='pass'></dd>
+                </dl>
+                <div class="info-fgt padding_5 clearfix">
+		    <input type="hidden" name="from" id="from" value=""/>
+                    <a href="http://member.tongyi.com/index.php/forget/" target="_blank" class="fll">忘记密码？</a>
+                   <!-- <div class="tiptxt red  text_r"></div>-->
+                </div>
+                <!--<dl class="padding_l5 clearfix">
+                    <dd class="check_lg clearfix"><input type="checkbox" name="zyxmember" class="fll check" id="check1" value="ok"><label for="check1" class="cur-p fll"> 使用智慧校园账号登录，请勾选 </label></dd>
+                </dl>-->
+                <dl class="padding_l5 clearfix">
+                    <dd class="check_lg clearfix"><input type="checkbox" name="remember" value="ok" class="fll check" id="check2"><label for="check2" class="cur-p fll"> 记住用户名（网吧或公用电脑上慎用) </label></dd>
+                </dl>
+                <div class="lgBtns clearfix">
+             
+                    <a href="javascript:document:lg_ty.submit();" class="lgBtns-lg fll">登录</a><a href="http://member.tongyi.com/index.php/register/?from=" target="_self" class="lgBtns-rg flr">注册</a>
+                </div>
+                <div class="lg-info margin_t20">其他方式登录</div>
+              
+                <div class="lg-sel clearfix">
+                    <a href="javascript:void(0)" onclick="toQzoneLogin()" class="qq"></a>
+                </div>
+                <div class="blue ft14 lnh30 applyForAccount text-center "><a href="http://www.tongyi.com/index.php/probation">申请试用账号 >></a></div>
+            </form>
+
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+<footer class="footer_lg">
+    <div class="containLg footer_lg clearfix">
+        <div class="footer_lg_l fll"><a href="javascript:void(0)"><img src="images/logo_bm_lg.jpg" ></a></div>
+        <div class="footer_lg_r fll">
+            <p>
+                <a href="http://www.tongyi.com/index.php/about">统一教育网简介</a>|
+                <a href="http://member.tongyi.com/index.php/service/pay/">服务价格说明</a>|
+                <a href="http://www.tongyi.com/index.php/about?ln=val">产品价值</a>|
+                <a href="http://www.tongyi.com/index.php/about?ln=corp">合作企业</a>|
+                <a href="http://www.tongyi.com/index.php/about?ln=zp">人才招聘</a>|
+                <a href="http://www.tongyi.com/index.php/about?ln=cprt">版权声明</a>|
+                <a href="http://www.tongyi.com/index.php/about?ln=contact">联系我们</a>|
+                <a href="http://www.tongyi.com/honor/index.html">企业荣誉</a>|
+                <a href="http://agent.tongyi.com/agent-test/login.php">财富系统</a>|
+                <a href="http://www.tongyi.com/alliance/index.php">联盟合作</a>|
+                <a href="http://www.tongyi.com/complain/index.php">客服反馈中心</a>|
+                <a href="http://www.tongyi.com/sitemap/">网站地图</a>
+            </p>
+            <p>Copyright © 2008 - 2016 tongyi.com Inc. All Rights Reserved.</p>
+        </div>
+
+        <!--<p class="l2">
+            <a href="javascript:void(0)">大连市一0八中学</a> |
+            <a href="javascript:void(0)">沈阳市第二十四中学</a> | <a href="javascript:void(0)">大连市普通高中创新实践学校</a> |
+            <a href="javascript:void(0)">吉林省榆树市第二实验中学</a> | <a href="javascript:void(0)">榆树市第一高级中学</a> |
+            <a href="javascript:void(0)">吉林市松花江中学</a> | <a href="javascript:void(0)">吉林市第二十五小学</a> |
+            <a href="javascript:void(0)">更多</a>
+        </p>
+        <p class="l3 margin_t15">信息网络传播视听节目许可证号:0108232 | 网站视频由中国青少年广播网提供托管及播放服务</p>
+        <p class="l3">京公网安备110101002611号 | 京ICP证110556| 京公网安备110105002037号| ICP证:B-2-4-20080039号 | 增值电信业务许可证Copyright © 2008 - 2012中国统一教育网</p>
+        <p class="l3">质量管理体系认证：GB/T19001-2008/ISO9001:2008     环境管理体系认证：GB/T24001-2004/ISO14001:2004    健康管理体系认证：GB/T28001-2011/OHSAS18001:2007</p>
+        <div class="tongyi-bm"><a href="javascript:void(0)"><img src="images/tongyi-bm.png" alt=""></a></div>-->
+    </div>
+</footer>
+
+
+</body>
+</html>

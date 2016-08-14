@@ -1,0 +1,292 @@
+<!DOCTYPE html><html lang="zh-cmn-Hans"><head><meta charset="UTF-8"><title>统一教育网</title><meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" /><!-- 移动设备优先 --><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="统一教育网"><meta name="keywords" content="统一教育网"><link rel="stylesheet" href="/Home/css/bootstrap.min.css"><link rel="stylesheet" href="/Home/css/base.css"><link rel="stylesheet" href="/Home/css/index.css"><link rel="stylesheet" href="/Home/css/modular.css?rand=1015"><script type="text/javascript" src="/Home/js/jquery.js"></script><script type="text/javascript" src="/Home/js/bootstrap.min.js"></script><script type="text/javascript" src="/Home/js/jquery.SuperSlide.2.1.1.js"></script><!--<script type="text/javascript" src="/Home/js/myfocus1.js"></script>--><script type="text/javascript" src="/Home/js/jquery.nav.js"></script><script type="text/javascript" src="/Home/js/wow.min.js"></script><!–[if lt IE 9]><script src="/Home/js/html5shiv.min.js"></script><![endif]–><script type="text/javascript" src="/Home/js/modular.js"></script><script type="text/javascript" src="/Home/js/star.js"></script><script language="javascript" src="/Home/js/jquery.form.js"></script></head><body>	<nav class="topBar pabs">		<div class="w1170 margin-auto-c">			<div class="topCon-left fll">				<a href="http://www.tongyi.com/" href="javascript:void (0)"					class="padding_l20">网站首页</a> <span class="padding_l20 padding_r20">欢迎您来统一教育</span>				请<a href="http://member.tongyi.com/index.php/login">登录</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a					href="http://member.tongyi.com/index.php/r										egister">免费注册</a>			</div>			<div class="topCon-right flr clearfix">				<div class="top-link">					<a href="http://member.tongyi.com" target="_blank">会员中心</a> | <a						href="http://member.tongyi.com/index.php/myclass" target="_blank">我的课程</a>					| <a href="http://member.tongyi.com/index.php/service/pay/">价格说明</a>					| <a href="http://www.tongyi.com/index.php/help">帮助中心</a> <span						class="specialColor padding_l30">客服热线：400-680-9088</span>				</div>			</div>		</div>	</nav>	<section class="advBar-topic">		<div class="courseBuy-page prel" style="background-color: #fff">			<div class="topic-con1-all">				<div class="container clearfix">					<div class="crumb">						<span>玩转物理课堂</span>					</div>					<div class="live-info-top clearfix">						<!--视频容器-->						<div class="col-md-6 clearfix">							<div class="player" id="id_video_container"></div>							<script src="/Home/js/h5connect.js"></script>							<script type="text/javascript">
+                                    var infoid = "";
+                                    var player;
+                                    (function() {
+                                    var option = {
+                                    "auto_play": "1",
+                                            "file_id": "14651978969260639639",
+                                            "app_id": "1251606588",
+                                            "width": 561,
+                                            "height": 377,
+											                                    		"WMode": "opaque"
+                                    };
+                                            var fullscreen = false;
+                                            /*调用播放器进行播放*/
+                                            player = new qcVideo.Player(
+                                                    "id_video_container",
+                                                    option,
+                                            {
+                                            'fullScreen': function(isFullScreen)
+                                            {
+                                            //alert(isFullScreen);
+                                            if (isFullScreen)
+                                            {
+                                            var fullscreen = true;
+                                            }
+                                            },
+                                                    'playStatus': function(status)
+                                                    {
+                                                    if (status == 'stop')
+                                                    {
+                                                    alert('试看结束，如需继续观看请点击“立即购买”');
+                                                    }
+                                                    }
+                                            }
+                                            );
+                                    })();
+                                    
+                                           $(function() {
+                                            //总时长80%
+                                            var vlongtime = parseInt(1526) * 0.1;
+                                                    //总时长
+                                                    var shichang = parseInt(1526);
+                                                    //总时长减去1秒
+                                                    var shichang_1 = parseInt(1526) - 1;
+                                                    //每秒获取当前播放时间
+                                                    var v80intvl=setInterval(function()
+                                                    {
+                                                    var vtime = player.getCurrentTime();
+                                                    if (vtime >= vlongtime) {
+														clearInterval(v80intvl);
+														var info_id = "361974";
+														var group_id = "362443";
+														var data = {info_id: info_id, group_id: group_id};
+														$.ajax({
+														type: "POST",
+																url: "http://www.tongyi.com/index.php/elite/add_next_video",
+																data: data,
+																dataType: "json",
+																success: function(e) {
+																//alert(e);
+																},
+														});
+                                                    }
+                                                    //修改视频已经看完状态
+                                                    if (vtime >= shichang_1){
+                                                    var info_id = "361974";
+                                                            var group_id = "362443";
+                                                            var data = {info_id: info_id, group_id: group_id};
+                                                            $.ajax({
+                                                            type: "POST",
+                                                                    url: "http://www.tongyi.com/index.php/elite/chg_video_status",
+                                                                    data: data,
+                                                                    //dataType: "json",
+                                                                    success: function(e) {
+                                                                    //alert(e);
+                                                                    },
+                                                            });
+                                                    }
+                                                    //自动播放下一个视频
+                                                    if (vtime >= shichang){
+                                                    var info_id = "361974";
+                                                            var group_id = "362443";
+                                                            var data = {info_id: info_id, group_id: group_id};
+                                                            $.ajax({
+                                                            type: "POST",
+                                                                    url: "http://www.tongyi.com/index.php/elite/get_next_video",
+                                                                    data: data,
+                                                                    //dataType: "json",
+                                                                    success: function(next_id) {
+                                                                      location.href = "http://www.tongyi.com/index.php/elite/course/362443/" + next_id;
+                                                                    },
+                                                            });
+                                                    }
+
+                                                    }, 1000);
+                                                                //点赞
+                                                    $("#good_click").click(function() {
+                                            var info_id = "361974";
+                                                    var group_id = "362443";
+                                                    var data = {info_id: info_id, group_id: group_id};
+                                                    $.ajax({
+                                                    type: "POST",
+                                                            url: "http://www.tongyi.com/index.php/elite/goodclick",
+                                                            data: data,
+                                                            dataType: "json",
+                                                            success: function(data, dataType) {
+                                                            //alert(data.num);
+                                                            if (data.err) {
+                                                            if (data.err == 'login') {
+                                                            alert('请先登录');
+                                                                    window.location.href = "http://member.tongyi.com/index.php/login";
+                                                                    return;
+                                                            }
+                                                            alert(data.err);
+                                                            } else if (data.msg) {
+                                                            alert("成功");
+                                                                    $("#admiration_num_view").html(data.num);
+                                                            }
+                                                            },
+                                                            error: function(XMLHttpRequest, textStatus, errorThrown) {
+                                                            alert('Error : ' + errorThrown);
+                                                            }
+                                                    });
+                                            });
+                                                    //提交评论
+                                                    $("#submitcomment").click(function() {
+
+                                            $("#submitcommentform").ajaxSubmit({
+                                            dataType: "json",
+                                                    beforeSend: function() {
+
+                                                    },
+                                                    success: function(data) {
+                                                    //alert(data.msg);
+                                                    if (data.msg == 'success') {
+                                                    $("#content_id").val("");
+                                                            alert('提交成功');
+                                                            //window.location.href = "http://www.tongyi.com/index.php/manageclass/classinfo/listinfo";
+                                                    } else if (data.err) {
+                                                    if (data.err == 'login') {
+                                                    alert('请先登录');
+                                                            window.location.href = "http://member.tongyi.com/index.php/login";
+                                                            return;
+                                                    }
+                                                    alert(data.err);
+                                                    }
+                                                    return false;
+                                                    },
+                                                    error: function(XMLHttpRequest, textStatus, errorThrown) {
+                                                    /*alert(XMLHttpRequest.status);
+                                                     alert(XMLHttpRequest.readyState);
+                                                     alert(errorThrown);
+                                                     alert('error:'+XMLHttpRequest.readyState);
+                                                     alert('error:'+XMLHttpRequest.status);*/
+                                                    },
+                                            });
+                                            });
+                                                    return false;
+                                            });</script>							<a href="javascript:void (0)"></a>							<div style="margin-top: 5px;" class="appdown hidden-xs">								<span id="appdown" class="pull-left">									<div style="float: left; display: inline">										<img width="22" style="display: block; background-color: #FFF"											src="/home/images/zhibo_phone.png" />									</div>									<div										style="float: left; display: inline; height: 22px; padding-top: 3px">客户端下载:										iOS \ 安卓</div>								</span>								<!--<img alt="课程直播 APP二维码" src="/home/images/2code.png" style="display: none;" id="appshow">-->							</div>							<span class="pull-right"></span>						</div>						<!--视频容器-->						<div class="col-md-6 live-info">							<h4>玩转物理课堂</h4>							<div class="price2">								价格<span>￥120.00</span>							</div>							<a								href="http://trade.tongyi.com?key=L5axPrs2sAEEOmPgZ6m5XBeLtvLLieZawIHZvQR9RfMQEXLh6kNuUF4PswhXgFdsdnCb2Hx05JtSPalgJ2F9ny3nbd2leiy%2FBX%2FXHNQcrFTCm%2FIa7fmD%2FWyiv4%2FIb8lV%2BXnjedF9U53SpqvbjUKAG4bNV9pVex0dI8LIUiwDAPKJPqY8fIgWmRW3Yyr4jA%2BYosnZl1W%2Fq3tb6q0XSX0gjR22LNCF1yW%2Ben%2F04QOovZMMXPyw9lf1%2BPIfsp%2B%2BwJP2R%2BMGMFuFYEcTH5HUTqhq3Ihg%2B9c8CgEQUHi9bXMD4%2Fn7vnglceBT5JjxdgfIJxSWWE0Tu%2BP1UJJlFCZY%2FkkLL5elnRAxYxuSdcH35WndLE6hKGGTQEZcLYQHUml7Q%2BSL"								target="_blank"><button class="buy">立即购买</button></a>							<ul class="live-info-ul">								<li>									<div class="pull-left" style="width: 150px">										<span>关注度</span> 7249									</div>									<div class="pull-left">										<span>满意度</span>100% <a href="javascript:;"											style="color: #4aa9ea">(评价0条)</a>									</div>								</li>								<li>									<div class="pull-left" style="width: 150px">										<span>总课时</span> 9课时									</div>									<div class="pull-left">										<span>有效期</span>180天<i class="ico-qa" data-toggle="tooltip"											data-placement="top" title="自购买课程之日起可以使用课程的期限."></i>									</div>								</li>								<li class="tag"><span>类别</span><a><i></i>初中，高中</a></li>							</ul>							<div class="clearfix"></div>							<div class="bottom-info">								<span class="jiathis_style"									onmousemove="$('.ckepopBottom').hide();" style="padding: 0"> <a									href="void(0)?PHPSESSID=onp85lin6rb5pfs0lk35mjfrv5"									class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"									style="margin-top: 4px;"></a> <span class="jiathis_txt"									style="padding: 0 15px 0 0; margin: 4px 0 0 0; border-right: #eee 1px solid; font-size: 14px;">分享</span>								</span>								<!-- JiaThis Button BEGIN -->								<script type="text/javascript" src="/Home/js/jia.js"									charset="utf-8"></script>								<!-- JiaThis Button END -->								<span><i class="ico-good" id="good_click"></i><b									id="admiration_num_view">0</b>人觉得赞</span>							</div>						</div>					</div>				</div>			</div>			<!--课程筛选-->			<div class="container mt20"				style="border-top: 1px solid #eee; padding-top: 20px">				<div class="col-md-9 live-info-detail p0">					<div class="title clearfix">						<ul class="nav nav-tabs pull-left clearfix" role="tablist">							<li role="presentation"><a								href="?PHPSESSID=onp85lin6rb5pfs0lk35mjfrv5#information"								role="tab" data-toggle="tab">课程简介</a></li>							<li role="presentation" class="active"><a href="#catalog"								role="tab" data-toggle="tab">课程目录</a></li>							<li role="presentation"><a href="#comment" role="tab"								data-toggle="tab">课程评价（<span style="color: #4aa9ea">0</span>）							</a></li>						</ul>					</div>					<div class="tab-content">						<!--课程详情-->						<div class="information tab-pane fade " id="information">							<p>玩转物理课堂</p>							<img src="/home/images/14682141856324.jpg">							<p></p>							<p>*网络服务费：包含人工费、课程制作费、服务器费、带宽费、电费以及其他费用。</p>						</div>						<!--课程详情-->						<div class="catalog tab-pane fade in active" id="catalog">							<!--课程目录-->							<table cellspacing="0" cellpadding="0" border="0">								<tbody>									<!--能看的是nei样式，不能看的是coming样式-->									<tr class=" nei"										onmouseover="this.style.backgroundColor = '#f4f4f4';"										onmouseout="this.style.backgroundColor = '#fff';">										<td width="3%" class="course-lock text-center"></td>										<td width="5%" class="text-center">&nbsp;&nbsp;01</td>										<td class="tr-icon" width="1px"><i></i></td>										<td width="60%" class="course-text"><a											href="http://www.tongyi.com/index.php/elite/course/362443/361974"											class="a_05"> &#12288;&#12288;浮力总复习 </a></td>										<td class="state text-center" width="18%">25:26</td>										<td class="downLoad text-center" width="8%"></td>										<td class="twocode text-center" width="8%"><span											class="ico-code"></span>											<div class="code-box" style="display: none">												<img id="lessoncode"													src="other/.php/elite/get_code2//361974" alt="课程直播 APP二维码">												<p>扫描二维码</p>												<p>观看此课程</p>											</div></td>									</tr>									<tr class=" nei"										onmouseover="this.style.backgroundColor = '#f4f4f4';"										onmouseout="this.style.backgroundColor = '#fff';">										<td width="3%" class="course-lock text-center"></td>										<td width="5%" class="text-center">&nbsp;&nbsp;02</td>										<td class="tr-icon" width="1px"><i></i></td>										<td width="60%" class="course-text"><a											href="http://www.tongyi.com/index.php/elite/course/362443/361973"											class="a_05"> &#12288;&#12288;物态变化 </a></td>										<td class="state text-center" width="18%">17:31</td>										<td class="downLoad text-center" width="8%"></td>										<td class="twocode text-center" width="8%"><span											class="ico-code"></span>											<div class="code-box" style="display: none">												<img id="lessoncode"													src="other/.php/elite/get_code2//361973" alt="课程直播 APP二维码">												<p>扫描二维码</p>												<p>观看此课程</p>											</div></td>									</tr>									<tr class=" nei"										onmouseover="this.style.backgroundColor = '#f4f4f4';"										onmouseout="this.style.backgroundColor = '#fff';">										<td width="3%" class="course-lock text-center"></td>										<td width="5%" class="text-center">&nbsp;&nbsp;03</td>										<td class="tr-icon" width="1px"><i></i></td>										<td width="60%" class="course-text"><a											href="http://www.tongyi.com/index.php/elite/course/362443/361972"											class="a_05"> &#12288;&#12288;压强复习 </a></td>										<td class="state text-center" width="18%">25:20</td>										<td class="downLoad text-center" width="8%"></td>										<td class="twocode text-center" width="8%"><span											class="ico-code"></span>											<div class="code-box" style="display: none">												<img id="lessoncode"													src="other/.php/elite/get_code2//361972" alt="课程直播 APP二维码">												<p>扫描二维码</p>												<p>观看此课程</p>											</div></td>									</tr>									<tr class=" nei"										onmouseover="this.style.backgroundColor = '#f4f4f4';"										onmouseout="this.style.backgroundColor = '#fff';">										<td width="3%" class="course-lock text-center"></td>										<td width="5%" class="text-center">&nbsp;&nbsp;04</td>										<td class="tr-icon" width="1px"><i></i></td>										<td width="60%" class="course-text"><a											href="http://www.tongyi.com/index.php/elite/course/362443/361971"											class="a_05"> &#12288;&#12288;力 </a></td>										<td class="state text-center" width="18%">32:39</td>										<td class="downLoad text-center" width="8%"></td>										<td class="twocode text-center" width="8%"><span											class="ico-code"></span>											<div class="code-box" style="display: none">												<img id="lessoncode"													src="other/.php/elite/get_code2//361971" alt="课程直播 APP二维码">												<p>扫描二维码</p>												<p>观看此课程</p>											</div></td>									</tr>									<tr class=" nei"										onmouseover="this.style.backgroundColor = '#f4f4f4';"										onmouseout="this.style.backgroundColor = '#fff';">										<td width="3%" class="course-lock text-center"></td>										<td width="5%" class="text-center">&nbsp;&nbsp;05</td>										<td class="tr-icon" width="1px"><i></i></td>										<td width="60%" class="course-text"><a											href="http://www.tongyi.com/index.php/elite/course/362443/361970"											class="a_05"> &#12288;&#12288;分子动理论 </a></td>										<td class="state text-center" width="18%">16:40</td>										<td class="downLoad text-center" width="8%"></td>										<td class="twocode text-center" width="8%"><span											class="ico-code"></span>											<div class="code-box" style="display: none">												<img id="lessoncode"													src="other/.php/elite/get_code2//361970" alt="课程直播 APP二维码">												<p>扫描二维码</p>												<p>观看此课程</p>											</div></td>									</tr>									<tr class=" nei"										onmouseover="this.style.backgroundColor = '#f4f4f4';"										onmouseout="this.style.backgroundColor = '#fff';">										<td width="3%" class="course-lock text-center"></td>										<td width="5%" class="text-center">&nbsp;&nbsp;06</td>										<td class="tr-icon" width="1px"><i></i></td>										<td width="60%" class="course-text"><a											href="http://www.tongyi.com/index.php/elite/course/362443/361969"											class="a_05"> &#12288;&#12288;内能和热量 </a></td>										<td class="state text-center" width="18%">19:53</td>										<td class="downLoad text-center" width="8%"></td>										<td class="twocode text-center" width="8%"><span											class="ico-code"></span>											<div class="code-box" style="display: none">												<img id="lessoncode"													src="other/.php/elite/get_code2//361969" alt="课程直播 APP二维码">												<p>扫描二维码</p>												<p>观看此课程</p>											</div></td>									</tr>									<tr class=" nei"										onmouseover="this.style.backgroundColor = '#f4f4f4';"										onmouseout="this.style.backgroundColor = '#fff';">										<td width="3%" class="course-lock text-center"></td>										<td width="5%" class="text-center">&nbsp;&nbsp;07</td>										<td class="tr-icon" width="1px"><i></i></td>										<td width="60%" class="course-text"><a											href="http://www.tongyi.com/index.php/elite/course/362443/361968"											class="a_05"> &#12288;&#12288;比热容 </a></td>										<td class="state text-center" width="18%">16:40</td>										<td class="downLoad text-center" width="8%"></td>										<td class="twocode text-center" width="8%"><span											class="ico-code"></span>											<div class="code-box" style="display: none">												<img id="lessoncode"													src="other/.php/elite/get_code2//361968" alt="课程直播 APP二维码">												<p>扫描二维码</p>												<p>观看此课程</p>											</div></td>									</tr>									<tr class=" nei"										onmouseover="this.style.backgroundColor = '#f4f4f4';"										onmouseout="this.style.backgroundColor = '#fff';">										<td width="3%" class="course-lock text-center"></td>										<td width="5%" class="text-center">&nbsp;&nbsp;08</td>										<td class="tr-icon" width="1px"><i></i></td>										<td width="60%" class="course-text"><a											href="http://www.tongyi.com/index.php/elite/course/362443/361967"											class="a_05"> &#12288;&#12288;热机 </a></td>										<td class="state text-center" width="18%">16:27</td>										<td class="downLoad text-center" width="8%"></td>										<td class="twocode text-center" width="8%"><span											class="ico-code"></span>											<div class="code-box" style="display: none">												<img id="lessoncode"													src="other/.php/elite/get_code2//361967" alt="课程直播 APP二维码">												<p>扫描二维码</p>												<p>观看此课程</p>											</div></td>									</tr>									<tr class=" nei"										onmouseover="this.style.backgroundColor = '#f4f4f4';"										onmouseout="this.style.backgroundColor = '#fff';">										<td width="3%" class="course-lock text-center"></td>										<td width="5%" class="text-center">&nbsp;&nbsp;09</td>										<td class="tr-icon" width="1px"><i></i></td>										<td width="60%" class="course-text"><a											href="http://www.tongyi.com/index.php/elite/course/362443/361966"											class="a_05"> &#12288;&#12288;电现象 </a></td>										<td class="state text-center" width="18%">13:39</td>										<td class="downLoad text-center" width="8%"></td>										<td class="twocode text-center" width="8%"><span											class="ico-code"></span>											<div class="code-box" style="display: none">												<img id="lessoncode"													src="other/.php/elite/get_code2//361966" alt="课程直播 APP二维码">												<p>扫描二维码</p>												<p>观看此课程</p>											</div></td>									</tr>								</tbody>							</table>						</div>						<div class="comment tab-pane fade" id="comment">							<div class="filter clearfix">								<div class="percent">									<span>100%</span> 满意度								</div>								<div class="radio">									<label class="radio-inline"> <input type="radio"										name="inlineRadioOptions1" id="inlineRadio1" value="0"										onclick="get_pinglun(0,362443)" checked="checked"> 全部评价（0）									</label> <label class="radio-inline"> <input type="radio"										name="inlineRadioOptions1" id="inlineRadio2" value="1"										onclick="get_pinglun(1,362443)"> 好评（0）									</label> <label class="radio-inline"> <input type="radio"										name="inlineRadioOptions1" id="inlineRadio3" value="2"										onclick="get_pinglun(2,362443)">中评（0）									</label> <label class="radio-inline"> <input type="radio"										name="inlineRadioOptions1" id="inlineRadio4" value="3"										onclick="get_pinglun(3,362443)">差评（0）									</label>								</div>							</div>							<div class="comment-info clearfix">								<p id="pinglunqu2" style="display: none;"></p>								<!--<nav class="mt20 clearfix">
+                                        <ul class="pagination pull-right">
+                                            <li>
+                                                <a href="#" aria-label="Previous">
+                                                    <span aria-hidden="true">上一页</span>
+                                                </a>
+                                            </li>
+                                            <li><a href="#">1</a></li>
+                                            <li><a href="#">2</a></li>
+                                            <li><a href="#">3</a></li>
+                                            <li><a href="#">4</a></li>
+                                            <li><a href="#">5</a></li>
+                                            <li>
+                                                <a href="#" aria-label="Next">
+                                                    <span aria-hidden="true">下一页</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </nav>-->								<script language="javascript">
+                                                //根据分类获取评论
+                                                        function get_pinglun(star, group_id) {
+                                                        if (!group_id) {
+                                                        return false;
+                                                        }
+                                                        var data = {group_id: group_id, star: star};
+                                                                $.ajax({
+                                                                type: "POST",
+                                                                        url: "http://www.tongyi.com/index.php/elite/get_comment_list",
+                                                                        data: data,
+                                                                        dataType: "json",
+                                                                        success: function(obj) {
+                                                                        var html = "";
+                                                                                for (i = 0; i < obj.length; i++) {
+                                                                                html += '<div class="media">';
+                                                                                html += '<div class="media-left">';
+                                                                                html += '<a href="javascript:;">';
+                                                                                html += '<img class="media-object" src="' + obj[i]['photo_url'] + '"';
+                                                                                html += 'style="width: 64px; height: 64px;"></a></div>';
+                                                                                html += '<div class="media-body">';
+                                                                                html += '<p class="media-heading">' + obj[i]['member_id'] + '<i></i>';
+                                                                                html += '<span class="small_star_' + obj[i]['star_level'] + '"></span>';
+                                                                                html += '<span class="pull-right">' + obj[i]['create_time'] + '</span></p>' + obj[i]['content'] + '</div>';
+                                                                                html += '</div>';
+                                                                        }
+                                                                        $('.media').hide();
+                                                                                $('#pinglunqu2').html(html);
+                                                                                $('#pinglunqu2').show();
+                                                                        },
+                                                                });
+                                                        }
+
+                                                //控制字符输入
+                                                function keypress()
+                                                {
+                                                var text1 = $("#commentinfo").val();
+                                                        var len = text1.length;
+                                                        if (len > 140) {
+                                                alert('最多输入140字符');
+                                                        var num = $("#commentinfo").val().substr(0, 140);
+                                                        $("#commentinfo").val(num);
+                                                        return;
+                                                }
+                                                var show = len + "/140";
+                                                        $("#zifu").html(show);
+                                                }
+                                    </script>								<div class="comment-area">									<h4>课程评价</h4>									<textarea class="form-control" rows="4" id="commentinfo"										onkeyup="keypress()"></textarea>									<input type="hidden" name="infoidid" value="362443"> <input										type="hidden" id="xxs" value="0"> <span>星级评价：</span>									<div id="rating-star" class="fl-l">										<a href="javascript:;" onclick="setxx(1)"											onfocus="this.blur();">0</a> <a href="javascript:;"											onclick="setxx(2)" onfocus="this.blur();">1</a> <a											href="javascript:;" onclick="setxx(3)" onfocus="this.blur();">2</a>										<a href="javascript:;" onclick="setxx(4)"											onfocus="this.blur();">3</a> <a href="javascript:;"											onclick="setxx(5)" onfocus="this.blur();">4</a> <input											type="hidden" id="goodLevel" />									</div>									<a class="pull-right btn" onclick="add_comment()">评论</a> <span										class="pull-right" id="zifu">0/140</span>								</div>							</div>						</div>					</div>				</div>				<script>
+                                        //设置星星数
+                                                function setxx(num) {
+                                                $("#xxs").val(num);
+                                                }
+
+                                        //有效期提示
+                                        $(function() {
+                                        $("[data-toggle='tooltip']").tooltip();
+                                        });
+                                                //添加评论
+                                                        function add_comment() {
+                                                        var commentinfo = $("#commentinfo").val();
+                                                                var star = $("#xxs").val();
+                                                                var group_id = $('[name="infoidid"]').val();
+                                                                var data = {content: commentinfo, star: star, infoidid: group_id};
+                                                                $.ajax({
+                                                                type: "POST",
+                                                                        url: "http://www.tongyi.com/index.php/elite/commentinfo",
+                                                                        data: data,
+                                                                        dataType: "json",
+                                                                        success: function(e) {
+                                                                        if (e.status == '98') {
+                                                                        alert('请先登录');
+                                                                                window.location.href = "http://member.tongyi.com/index.php/login";
+                                                                                return;
+                                                                        } else if (e.status == '99') {
+                                                                        alert('请填写评价内容');
+                                                                                return;
+                                                                        } else if (e.status == '97') {
+                                                                        alert('购买后才能评论');
+                                                                                return;
+                                                                        } else if (e.msg == 'success') {
+                                                                        alert('评价成功');
+                                                                                $("#commentinfo").val('');
+                                                                        }
+                                                                        },
+                                                                });
+                                                        }
+                    </script>				<div class="col-md-3 p0">					<div class="school-box clearfix">						<div class="pull-left" style="width: 100%; margin: 10px 0">							<img class="pull-left" src="/home/images/14660660962788.png"								style="width: 80px; height: 80px;"> <span class="school-name">郓城县第一初级中学家委会</span>							<a class="btn btn-live"								href="http://www.tongyi.com/index.php/elite/detail/5">进入学校</a>						</div>						<div class="number">							<li class="line-r"><span>12081</span> 关注度</li>							<li><span>97%</span> 满意度</li>							<li class="line-r line-t"><span>192</span> 课程数</li>							<li class="line-t"><span>576</span> 学生数</li>							<div class="clearfix"></div>						</div>					</div>					<div class="lesson-box clearfix mt20">						<h4>相关课程</h4>						<div class="col-md-12 teacher-lesson">							<a href="http://www.tongyi.com/index.php/elite/course/362438"								title="领先一步学物理"> <img class="img-responsive"								src="/home/images/14681163588996.jpg">							</a>							<p>领先一步学物理</p>						</div>						<div class="col-md-12 teacher-lesson">							<a href="http://www.tongyi.com/index.php/elite/course/360507"								title="初中物理之玩转密度"> <img class="img-responsive"								src="/home/images/14619321745653.png">							</a>							<p>初中物理之玩转密度</p>						</div>						<div class="col-md-12 teacher-lesson">							<a href="http://www.tongyi.com/index.php/elite/course/361043"								title="攀枝花市实验学校初中物理样课"> <img class="img-responsive"								src="/home/images/14673655267523.png">							</a>							<p>攀枝花市实验学校初中物理样课</p>						</div>						<div class="col-md-12 teacher-lesson">							<a href="http://www.tongyi.com/index.php/elite/course/361346"								title="初二物理作业"> <img class="img-responsive"								src="/home/images/14677737296181.png">							</a>							<p>初二物理作业</p>						</div>					</div>				</div>			</div>		</div>	</section>	<div class="mask-layer pabs"></div>	<footer>		<div class="contain footer">			<p class="l1">				<a target="_blank" href="http://www.tongyi.com/index.php/about/">统一教育网简介</a>				| <a target="_blank" href="http://www.tongyiedu.com">统一教育集团</a> | <a					target="_blank"					href="http://member.tongyi.com/index.php/service/pay">服务价格说明</a> |				<a target="_blank"					href="http://www.tongyi.com/index.php/about?ln=val">产品价值</a> | <a					target="_blank"					href="http://www.tongyi.com/index.php/about?ln=corp">合作企业</a> | <a					target="_blank" href="http://www.tongyi.com/index.php/about?ln=zp">人才招聘</a>				<a target="_blank"					href="http://www.tongyi.com/index.php/about?ln=cprt">版权声明</a> | <a					target="_blank"					href="http://www.tongyi.com/index.php/about?ln=contact">联系我们</a> |				<a target="_blank"					href="http://agent.tongyi.com/agent-test/login.php">财富系统</a> | <a					target="_blank" href="http://www.tongyi.com/alliance/index.php">联盟合作</a>				| <a target="_blank" href="http://www.tongyi.com/sitemap/">网站地图</a>			</p>			<p class="l3 mt15">信息网络传播视听节目许可证号:0108232 | 网站视频由中国青少年广播网提供托管及播放服务</p>			<p class="l3">京公网安备110101002611号 | 京ICP证16656| 京公网安备11066002037号|				ICP证:B-2-4-20080039号 | 增值电信业务许可证Copyright &copy; 2008 - 2016中国统一教育网</p>			<p class="l3">质量管理体系认证：GB/T19001-2008/ISO9001:2008				环境管理体系认证：GB/T24001-2004/ISO14001:2004				健康管理体系认证：GB/T28001-2011/OHSAS18001:2007</p>			<div class="tongyi-bm">				<a href="http://www.tongyi.com/"> <img alt=""					src="/home/images/tongyi-bm.png"></a>			</div>		</div>	</footer>	</div></body></html><script>
+                            $('#rating-star').on('click', 'a', function() {
+                            $('#rating-star').data('star', this.innerHTML);
+                            }).on('mouseenter', 'a', function() {
+                            setStar(this);
+                            }).on('mouseleave', 'a', function() {
+                            var $r_star = $('#rating-star');
+                                    var level = $r_star.data('star');
+                                    var $stars = $r_star.find('a');
+                                    if (level) {
+                            setStar($stars[level]);
+                            } else {
+                            $stars.css('background-position', '0 -90px');
+                            }
+                            });
+                                    function setStar(star) {
+                                    var $this = $(star);
+                                            var level = $this.html();
+                                            var n;
+                                            if (level == '2') {
+                                    n = '0 -30px';
+                                    } else if (level == '1') {
+                                    n = '0 0';
+                                    } else {
+                                    n = '0 -60px';
+                                    }
+                                    $this.prevAll().andSelf().css('background-position', n);
+                                            $this.nextAll().css('background-position', '0 -90px');
+                                    }
+</script>

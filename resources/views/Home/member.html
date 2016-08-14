@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+<meta charset="UTF-8">
+<title>中国统一教育网-中小学在线教学平台</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1"/>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="description" content="中国统一教育网是著名的中小学在线教学平台，主打视频在线教学，结合独创的五步学习法，通过课前预习，课后练习，单元复习，综合测试及在线答疑、智能题库等功能，快速帮助中小学生提高学习成绩，是家长与教师的好帮手。">
+<meta name="keywords" content="在线教育,在线题库,智能组卷,在线答疑,网校,在线学习,中小学课外辅导,网络课堂">
+<meta name="baidu-site-verification" content="ejNArDnfNW" />
+<!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+<link rel="stylesheet" href="css/base.css?rand=548081325">
+<link rel="stylesheet" href="css/index.css?rand=1065487920">
+<link rel="stylesheet" href="css/modular.css?rand=1037347120">
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/jquery.SuperSlide.2.1.1.js"></script>
+<!--<script type="text/javascript" src="js/myfocus1.js"></script>-->
+<script type="text/javascript" src="js/jquery.nav.js"></script>
+<!–[if lt IE 9]><script src="js/html5shiv.min.js"></script><![endif]–>
+<script type="text/javascript" src="js/modular.js"></script>
+<script type="text/javascript" src="js/wow.min.js"></script>
+</head>
+<body>
+<nav class="topBar pabs">
+    <div class="w1170 margin-auto-c">
+        <div class="topCon-left fll">
+        	<a href="http://www.tongyi.com/" href="javascript:void (0)" class="padding_l20">网站首页</a> 
+        	<span class="padding_l20 padding_r20">欢迎您来统一教育</span>
+        		            请<a href="http://member.tongyi.com/index.php/login">登录</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="http://member.tongyi.com/index.php/register">免费注册</a>
+			        	
+        </div>
+        <div class="topCon-right flr clearfix">
+            <div class="top-link">
+                <a href="http://member.tongyi.com" target="_blank">会员中心</a> | 
+                <a href="http://member.tongyi.com/index.php/myclass" target="_blank">我的课程</a> | 
+                <a href="http://member.tongyi.com/index.php/service/pay/">价格说明</a> | 
+                <a href="http://www.tongyi.com/index.php/help">帮助中心</a>
+                <span class="specialColor padding_l30">客服热线：400-680-9088</span>
+            </div>
+        </div>
+    </div>
+</nav><section class="advBar-topic">
+    <div class="courseBuy-page prel">
+        <div class="topic-con1-all">
+            <div class="courseBuy-con1 clearfix">
+                <div class="topic-con1-l fll">
+                    <div class="topic-con1-schImg"><img src="images/14660660962788.png"></div>
+                </div>
+                <div class="topic-con1-r fll margin_l30">
+                    <p class="topic-con1-r-pt1 margin_t10">郓城县第一初级中学家委会</p>
+                    <ul class="topic-con1-r-pt2 clearfix">
+                        <li><i>总课时:</i> <span class="blue">12</span></li>
+                        <li><i>满意度:</i> <span class="blue">98%</span></li>
+                        <li><i>年段:</i> <span class="blue">初中，高中</span></li>
+                        <li><i>销售数:</i> <span class="blue">0</span></li>
+                        <!-- <a href="javascript:void (0)" id="goods_buy" class="btnBuy flr">课程购买</a> -->
+                    </ul>
+                    <p class="topic-con1-r-pt3 ft14 padding_b20 margin_t15">
+                        <span class="color_6">学校简介：</span>  郓城县第一初级中学成立于2009年3月，位于郓城县西门街中段，交通便利，环境优美，为原郓城县实验中学老校区。2012年城区学校布局调整，原郓城镇中学并入郓城县第一初级中学，形成东、西两个校区，72个教学班，学生4500余人。
+学校拥有一流的教学设施，建有教学办公楼、图书实验楼、过街天桥、运动场等，并按标准化装配了物理实验室、化学实验室、生物实验室、电子备课室、音乐室、美术室、多媒体教室、多功能报告厅、科普活动室、科普展室等。                        <a href="javascript:void(0)" class="blue but-open">展开 <img src="images/icon-zankai.png" alt="" align="absmiddle"></a>
+                        <a href="javascript:void(0)" class="blue but-up" style="display: none">收缩 <img src="images/icon-shousuo.png" alt="" align="absmiddle"></a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!--课程购买窗口-->
+        <div class="popupBox pabs" id="show_buy" >
+            <div class="box-con border-dc">
+                <div class="box-con-title border-bm clearfix">
+                    <div class="box-con-title-l fll ft18"><i class="icon-box-title margin_l20"></i> 课程购买</div>
+                    <div class="box-con-title-r flr"><a id="close01" href="javascript:void(0)" class="btn-close01"></a></div>
+                </div>
+                <div class="box-con-info">
+                    <div class="box-info-tip clearfix">
+                        <p class="blue fll">首先选择您要购买课程的所属年级，然后选择您要购买的课程科目（可多选），购买即可~</p>
+                        <a href="javascript:void(0)" class="btn-close02 flr"></a>
+                    </div>
+                    <div class="selCourse">
+                        <form id="kechengbuy" name="kechengbuy" action="http://www.tongyi.com/index.php/elite/goodsBuy" method="post">
+                        <dl class="clearfix">
+                            <dt class="fll">年级:</dt>
+                            <dd class="fll">
+                                <ul class="clearfix">
+                                                                    </ul>
+                            </dd>
+                        </dl>
+                        <dl class="clearfix">
+                            <dt class="fll">科目:</dt>
+                            <!-- <dd class="fll">
+                                <ul class="clearfix">
+                                    <li><input type="checkbox" id="course00" onclick="checkAll(this);"> <label for="course00">全部</label></li>
+                                </ul>
+                            </dd> -->
+                        </dl>
+                        <dl class="clearfix">
+                            <dt class="fll">&nbsp;</dt>
+                            <dd class="fll">
+                                <ul class="clearfix" id="courseCon">
+                                </ul>
+                                <div class="course-content">
+                                    <ul id="introduce">
+                                    </ul>
+                                </div>
+                                <div class="priceAll margin_t20" id="heji" style="display:none;">
+                                    <span class="ft18 color_0">合计</span> <span class="ft20 red2">￥</span> <span class="ft30 red2 margin_r20" id="total_price"></span><span class="color_9">| <span class="margin_l10" id="youhui_price"></span></span>
+                                </div>
+                                <div class="btnGroup">
+                                    <a href="javascript:void(0)" id="course-buy" class="course-buy">立即购买</a>
+                                    <a href="http://www.tongyi.com/index.php/elite/course/360494" class="course-view">免费试看</a>
+                                </div>
+                            </dd>
+                        </dl>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--课程筛选-->
+        <!--课程部分-->
+        <div class="courseBuy-con2 mt20">
+            
+            <p class="tiptxt ft14 lnh30 mb10 text-center">提示：为了保障您的账号安全，请您务必<a href="http://member.tongyi.com/index.php/password">修改密码</a>后再购买课程。</p>
+            
+            
+            
+            
+                        
+            <!--科目套餐-->
+            
+            <!--系列课程-->
+                        <div class="school-title border-bm">
+                <p class="ft24 lnh40 border-b-orange inl-b padding_5">系列<span class="orange">课程</span></p>
+            </div>
+            <div class="courseBuy-con2-row1">
+                <ul class="border-dc margin_t20">
+                    <li class="clearfix">
+                        <span class="blue ft14 fll">年级:</span>
+                        <div class="cour-con2-row1-li01-r fll">
+                            <a href="http://www.tongyi.com/index.php/elite/detail/5">全部</a>
+                                                          <a href="?category=0:44:64:65:" >七年级</a>
+                                                          <a href="?category=0:44:64:68:" >八年级</a>
+                                                          <a href="?category=0:44:64:71:" >九年级</a>
+                                                    </div>
+                    </li>
+                    <li class="clearfix">
+                        <span class="blue ft14 fll">科目:</span>
+                        <div class="cour-con2-row1-li01-r fll">
+                            <a href="http://www.tongyi.com/index.php/elite/detail/5">全部</a>
+                                                          <a href="?category=&subject=2" >数学</a>
+                                                          <a href="?category=&subject=6" >物理</a>
+                                                          <a href="?category=&subject=3" >英语</a>
+                                                          <a href="?category=&subject=1" >语文</a>
+                                                    </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="courseBuy-con2-row2 border-dc margin_t20 clearfix">
+                <ul class="fll clearfix">
+                    <li class="hover"><a href="http://www.tongyi.com/index.php/elite/detail/5?order=click&order=click">综合排序</a></li>
+                    <li ><a href="http://www.tongyi.com/index.php/elite/detail/5?order=click&order=new">最新</a></li>
+                    <li ><a href="http://www.tongyi.com/index.php/elite/detail/5?order=click&order=sell">销量</a></li>
+                    <li ><a href="http://www.tongyi.com/index.php/elite/detail/5?order=click&order=scores">满意度</a></li>
+                    <li ><a href="http://www.tongyi.com/index.php/elite/detail/5?order=click&order=price-asc">价格 <span><i class="price-up hover02"></i><i class="price-down"></i></span></a></li>
+                </ul>
+                <div class="searchBar margin_r10 flr">
+                    <form name="search" id="search" action="http://www.tongyi.com/index.php/elite/detail/5?" method="get">
+                        <input type="text" name="title" placeholder="请输入课程名称"><button class="cur-p" id="searchbtn">搜索</button>
+                    </form>
+                </div>
+            </div>
+            <div class="courseBuy-con2-row3">
+                <ul class="clearfix margin_t10">
+                                        <li>
+                        <a href="javascript:void (0)" onclick='window.open("http://www.tongyi.com/index.php/elite/course/362435")'>
+                            <dl>
+                                <dt class="prel">
+                                    <img src="images/14681154096181.jpg" alt="课程图片">
+                                    <!--<p class="course-info01 pabs"><span class="margin_r10">七年级</span> <span>语文</span></p>-->
+                                    <div class="course-info02 pabs">
+                                        <ul class="margin_t10">
+                                            <li>七年级 语文</li>
+                                            <li>讲师：陈淑华、张功领</li>
+                                            <li>学校：郓城县第一初级中学家委会</li>
+                                        </ul>
+                                    </div>
+                                </dt>
+                                <dd>巧占语文制高点</dd>
+                                <dd class="clearfix"><span class="fll color_9">陈淑华、张...</span><span class="flr ft14 red2">￥<span class="ft20">120.00</span></span></dd>
+                            </dl>
+                        </a>
+                    </li>
+                                        <li>
+                        <a href="javascript:void (0)" onclick='window.open("http://www.tongyi.com/index.php/elite/course/362436")'>
+                            <dl>
+                                <dt class="prel">
+                                    <img src="images/14681158588832.jpg" alt="课程图片">
+                                    <!--<p class="course-info01 pabs"><span class="margin_r10">七年级</span> <span>数学</span></p>-->
+                                    <div class="course-info02 pabs">
+                                        <ul class="margin_t10">
+                                            <li>七年级 数学</li>
+                                            <li>讲师：张韦强、刁振华</li>
+                                            <li>学校：郓城县第一初级中学家委会</li>
+                                        </ul>
+                                    </div>
+                                </dt>
+                                <dd>基础知识抢先看</dd>
+                                <dd class="clearfix"><span class="fll color_9">张韦强、刁...</span><span class="flr ft14 red2">￥<span class="ft20">120.00</span></span></dd>
+                            </dl>
+                        </a>
+                    </li>
+                                        <li>
+                        <a href="javascript:void (0)" onclick='window.open("http://www.tongyi.com/index.php/elite/course/362437")'>
+                            <dl>
+                                <dt class="prel">
+                                    <img src="images/14681161989758.jpg" alt="课程图片">
+                                    <!--<p class="course-info01 pabs"><span class="margin_r10">八年级</span> <span>英语</span></p>-->
+                                    <div class="course-info02 pabs">
+                                        <ul class="margin_t10">
+                                            <li>八年级 英语</li>
+                                            <li>讲师：佀翠田、张秀娟</li>
+                                            <li>学校：郓城县第一初级中学家委会</li>
+                                        </ul>
+                                    </div>
+                                </dt>
+                                <dd>英语知识轻松学</dd>
+                                <dd class="clearfix"><span class="fll color_9">佀翠田、张...</span><span class="flr ft14 red2">￥<span class="ft20">120.00</span></span></dd>
+                            </dl>
+                        </a>
+                    </li>
+                                        <li>
+                        <a href="javascript:void (0)" onclick='window.open("http://www.tongyi.com/index.php/elite/course/362438")'>
+                            <dl>
+                                <dt class="prel">
+                                    <img src="images/14681163588996.jpg" alt="课程图片">
+                                    <!--<p class="course-info01 pabs"><span class="margin_r10">七年级</span> <span>物理</span></p>-->
+                                    <div class="course-info02 pabs">
+                                        <ul class="margin_t10">
+                                            <li>七年级 物理</li>
+                                            <li>讲师：梁美华</li>
+                                            <li>学校：郓城县第一初级中学家委会</li>
+                                        </ul>
+                                    </div>
+                                </dt>
+                                <dd>领先一步学物理</dd>
+                                <dd class="clearfix"><span class="fll color_9">梁美华</span><span class="flr ft14 red2">￥<span class="ft20">120.00</span></span></dd>
+                            </dl>
+                        </a>
+                    </li>
+                                        <li>
+                        <a href="javascript:void (0)" onclick='window.open("http://www.tongyi.com/index.php/elite/course/362439")'>
+                            <dl>
+                                <dt class="prel">
+                                    <img src="images/14682142898758.jpg" alt="课程图片">
+                                    <!--<p class="course-info01 pabs"><span class="margin_r10">八年级</span> <span>语文</span></p>-->
+                                    <div class="course-info02 pabs">
+                                        <ul class="margin_t10">
+                                            <li>八年级 语文</li>
+                                            <li>讲师：张供领、张洪国</li>
+                                            <li>学校：郓城县第一初级中学家委会</li>
+                                        </ul>
+                                    </div>
+                                </dt>
+                                <dd>语文学习微技巧</dd>
+                                <dd class="clearfix"><span class="fll color_9">张供领、张...</span><span class="flr ft14 red2">￥<span class="ft20">120.00</span></span></dd>
+                            </dl>
+                        </a>
+                    </li>
+                                        <li>
+                        <a href="javascript:void (0)" onclick='window.open("http://www.tongyi.com/index.php/elite/course/362441")'>
+                            <dl>
+                                <dt class="prel">
+                                    <img src="images/14682142531923.jpg" alt="课程图片">
+                                    <!--<p class="course-info01 pabs"><span class="margin_r10">八年级</span> <span>数学</span></p>-->
+                                    <div class="course-info02 pabs">
+                                        <ul class="margin_t10">
+                                            <li>八年级 数学</li>
+                                            <li>讲师：刁振华、石洪英</li>
+                                            <li>学校：郓城县第一初级中学家委会</li>
+                                        </ul>
+                                    </div>
+                                </dt>
+                                <dd>巧学数学全攻略</dd>
+                                <dd class="clearfix"><span class="fll color_9">刁振华、石...</span><span class="flr ft14 red2">￥<span class="ft20">120.00</span></span></dd>
+                            </dl>
+                        </a>
+                    </li>
+                                        <li>
+                        <a href="javascript:void (0)" onclick='window.open("http://www.tongyi.com/index.php/elite/course/362442")'>
+                            <dl>
+                                <dt class="prel">
+                                    <img src="images/14682142213423.jpg" alt="课程图片">
+                                    <!--<p class="course-info01 pabs"><span class="margin_r10">八年级</span> <span>英语</span></p>-->
+                                    <div class="course-info02 pabs">
+                                        <ul class="margin_t10">
+                                            <li>八年级 英语</li>
+                                            <li>讲师：张秀娟、王金敏</li>
+                                            <li>学校：郓城县第一初级中学家委会</li>
+                                        </ul>
+                                    </div>
+                                </dt>
+                                <dd>细说英语那些事</dd>
+                                <dd class="clearfix"><span class="fll color_9">张秀娟、王...</span><span class="flr ft14 red2">￥<span class="ft20">120.00</span></span></dd>
+                            </dl>
+                        </a>
+                    </li>
+                                        <li>
+                        <a href="javascript:void (0)" onclick='window.open("http://www.tongyi.com/index.php/elite/course/362443")'>
+                            <dl>
+                                <dt class="prel">
+                                    <img src="images/14682141851935.jpg" alt="课程图片">
+                                    <!--<p class="course-info01 pabs"><span class="margin_r10">八年级</span> <span>物理</span></p>-->
+                                    <div class="course-info02 pabs">
+                                        <ul class="margin_t10">
+                                            <li>八年级 物理</li>
+                                            <li>讲师：梁美华、仝现标</li>
+                                            <li>学校：郓城县第一初级中学家委会</li>
+                                        </ul>
+                                    </div>
+                                </dt>
+                                <dd>玩转物理课堂</dd>
+                                <dd class="clearfix"><span class="fll color_9">梁美华、仝...</span><span class="flr ft14 red2">￥<span class="ft20">120.00</span></span></dd>
+                            </dl>
+                        </a>
+                    </li>
+                                        <li>
+                        <a href="javascript:void (0)" onclick='window.open("http://www.tongyi.com/index.php/elite/course/362444")'>
+                            <dl>
+                                <dt class="prel">
+                                    <img src="images/14682141554287.jpg" alt="课程图片">
+                                    <!--<p class="course-info01 pabs"><span class="margin_r10">九年级</span> <span>语文</span></p>-->
+                                    <div class="course-info02 pabs">
+                                        <ul class="margin_t10">
+                                            <li>九年级 语文</li>
+                                            <li>讲师：张洪国</li>
+                                            <li>学校：郓城县第一初级中学家委会</li>
+                                        </ul>
+                                    </div>
+                                </dt>
+                                <dd>关于记叙文阅读的那些事</dd>
+                                <dd class="clearfix"><span class="fll color_9">张洪国</span><span class="flr ft14 red2">￥<span class="ft20">120.00</span></span></dd>
+                            </dl>
+                        </a>
+                    </li>
+                                        <li>
+                        <a href="javascript:void (0)" onclick='window.open("http://www.tongyi.com/index.php/elite/course/362445")'>
+                            <dl>
+                                <dt class="prel">
+                                    <img src="images/14682141025978.jpg" alt="课程图片">
+                                    <!--<p class="course-info01 pabs"><span class="margin_r10">九年级</span> <span>数学</span></p>-->
+                                    <div class="course-info02 pabs">
+                                        <ul class="margin_t10">
+                                            <li>九年级 数学</li>
+                                            <li>讲师：石洪英</li>
+                                            <li>学校：郓城县第一初级中学家委会</li>
+                                        </ul>
+                                    </div>
+                                </dt>
+                                <dd>几何图形全解析</dd>
+                                <dd class="clearfix"><span class="fll color_9">石洪英</span><span class="flr ft14 red2">￥<span class="ft20">120.00</span></span></dd>
+                            </dl>
+                        </a>
+                    </li>
+                                        <li>
+                        <a href="javascript:void (0)" onclick='window.open("http://www.tongyi.com/index.php/elite/course/362446")'>
+                            <dl>
+                                <dt class="prel">
+                                    <img src="images/14682140611445.jpg" alt="课程图片">
+                                    <!--<p class="course-info01 pabs"><span class="margin_r10">九年级</span> <span>英语</span></p>-->
+                                    <div class="course-info02 pabs">
+                                        <ul class="margin_t10">
+                                            <li>九年级 英语</li>
+                                            <li>讲师：王金敏</li>
+                                            <li>学校：郓城县第一初级中学家委会</li>
+                                        </ul>
+                                    </div>
+                                </dt>
+                                <dd>语法智勇大冲关</dd>
+                                <dd class="clearfix"><span class="fll color_9">王金敏</span><span class="flr ft14 red2">￥<span class="ft20">120.00</span></span></dd>
+                            </dl>
+                        </a>
+                    </li>
+                                        <li>
+                        <a href="javascript:void (0)" onclick='window.open("http://www.tongyi.com/index.php/elite/course/362447")'>
+                            <dl>
+                                <dt class="prel">
+                                    <img src="images/14682139658139.jpg" alt="课程图片">
+                                    <!--<p class="course-info01 pabs"><span class="margin_r10">九年级</span> <span>物理</span></p>-->
+                                    <div class="course-info02 pabs">
+                                        <ul class="margin_t10">
+                                            <li>九年级 物理</li>
+                                            <li>讲师：仝现标</li>
+                                            <li>学校：郓城县第一初级中学家委会</li>
+                                        </ul>
+                                    </div>
+                                </dt>
+                                <dd>生活处处有电磁</dd>
+                                <dd class="clearfix"><span class="fll color_9">仝现标</span><span class="flr ft14 red2">￥<span class="ft20">120.00</span></span></dd>
+                            </dl>
+                        </a>
+                    </li>
+                    
+                </ul>
+                <div class="paging">
+                    <ul class="clearfix">
+                                            </ul>
+                </div>
+            </div>
+                    </div>
+        <!--师资介绍-->
+                <div class="teacher-all margin_t50">
+            <div class="teacher-intro margin-auto-c clearfix">
+                <h2 class="margin-auto-c special-page title-szjs margin_b50"></h2>
+                <div class="topic-con3-r clearfix">
+                                        <div class="onetea">
+                        <dl class="clearfix">
+                            <dt class="fll"><img src="images/14660687832636.jpg" alt="" width="150" height="150"></dt>
+                            <dd class="fll"><a href="javascript:void(0)" class="orange ft20 padding_r15 padding_l5">石洪英</a>| <span class="padding_l10">特级教师</span></dd>
+                        </dl>
+                        <p>石洪英,毕业于曲阜师范大学数学系。郓城第一初级中学数学教师，县级优秀教师，教育教学先进工作者，市优质课教学一等奖，数学组教研组长。勤奋不息、爱岗敬业。以精益求精的工作作风，任劳任怨的工作态度，以高度的热忱投入到教书育人的工作之中，全心全意做好教育教学工作。</p>
+                    </div>
+                                        <div class="onetea">
+                        <dl class="clearfix">
+                            <dt class="fll"><img src="images/14665855571411.png" alt="" width="150" height="150"></dt>
+                            <dd class="fll"><a href="javascript:void(0)" class="orange ft20 padding_r15 padding_l5">张功领</a>| <span class="padding_l10">特级教师</span></dd>
+                        </dl>
+                        <p>张功领, 毕业于山东师范大学汉语言文学专业，菏泽市骨干教师，语文学科带头人，国家二级心理咨询师。在教学活动中，尊重学生个性特点，充分体现“以人为本”的教学理念。在教学中善于总结创新，不拘一格，改变传统教学方法，将知识重新组合以适合孩子接受的形式呈现出来，深受学生欢迎。</p>
+                    </div>
+                                        <div class="onetea">
+                        <dl class="clearfix">
+                            <dt class="fll"><img src="images/14665855775828.png" alt="" width="150" height="150"></dt>
+                            <dd class="fll"><a href="javascript:void(0)" class="orange ft20 padding_r15 padding_l5">张秀娟</a>| <span class="padding_l10">特级教师</span></dd>
+                        </dl>
+                        <p>张秀娟, 毕业于曲阜师范大学英语系。郓城第一初级中学英语教师，县教学能手，教学工作先进个人，菏泽市电化教育教学能手。</p>
+                    </div>
+                                        <div class="onetea">
+                        <dl class="clearfix">
+                            <dt class="fll"><img src="images/14665856475220.png" alt="" width="150" height="150"></dt>
+                            <dd class="fll"><a href="javascript:void(0)" class="orange ft20 padding_r15 padding_l5">陈淑华</a>| <span class="padding_l10">特级教师</span></dd>
+                        </dl>
+                        <p>
+	陈淑华,毕业于曲阜师范大学汉语言文学专业。从事语文教学近20年，勤恳敬业，成绩突出。现为高级中学教师资格，菏泽市教学能手，菏泽市优质课比赛一等奖，优秀班主任。语文学科带头人，语文组教研组长。在《教学与研究》、《语文报》等核心期刊发表论文多篇，获中小学教育科研优秀成果一等奖。上课讲解生动、形象，细致，有亲和力,善于激励、鼓舞学生。教法灵活，能有效提高学生的语文学习兴趣。
+</p>
+                    </div>
+                                        <div class="onetea">
+                        <dl class="clearfix">
+                            <dt class="fll"><img src="images/14665857873296.png" alt="" width="150" height="150"></dt>
+                            <dd class="fll"><a href="javascript:void(0)" class="orange ft20 padding_r15 padding_l5">刁振华</a>| <span class="padding_l10">特级教师</span></dd>
+                        </dl>
+                        <p>刁振华, 毕业于郓城师范学校。郓城县第一初级中学数学教师，数学学科带头人，数学组教研组长。县优秀人民教师，县骨干教师、教学能手，县教育教学工作先进工作者。市优质课一等奖获得者，菏泽市初中教师教学基本功大赛优胜奖获得者，学校首届优质课大赛第一名，学校“一师一优课”活动比赛中一等奖获得者。主编过《课本大讲解》、《七彩课堂》、《直通中考》、《满分训练》等学生用书；参与编辑《考出好成绩》（菏泽中考专版）。</p>
+                    </div>
+                                        <div class="onetea">
+                        <dl class="clearfix">
+                            <dt class="fll"><img src="images/14665858245808.png" alt="" width="150" height="150"></dt>
+                            <dd class="fll"><a href="javascript:void(0)" class="orange ft20 padding_r15 padding_l5">梁美华</a>| <span class="padding_l10">特级教师</span></dd>
+                        </dl>
+                        <p>梁美华，毕业于曲阜师范大学物理系，郓城县教学能手，多次获得县级以上荣誉称号，地区优质课执教人，2014年山东省优质课执教人。郓城第一初级中学物理教师，物理学科带头人，物理组教研组长。勤奋不息、爱岗敬业，用甘于清贫、无私奉献的道德水准来要求自己。以精益求精的工作作风，任劳任怨的工作态度；以极度的热忱投入到教书育人的工作之中，全心全意做好教育教学工作</p>
+                    </div>
+                                        <div class="onetea">
+                        <dl class="clearfix">
+                            <dt class="fll"><img src="images/14667304752761.png" alt="" width="150" height="150"></dt>
+                            <dd class="fll"><a href="javascript:void(0)" class="orange ft20 padding_r15 padding_l5">佀翠田</a>| <span class="padding_l10">特级教师</span></dd>
+                        </dl>
+                        <p>佀翠田, 毕业于曲阜师范大学，英语专业四级。郓城县第一初级中学英语教师，郓城县英语学科带头人，菏泽市教学能手，名班主任。勤奋不息、爱岗敬业，用甘于清贫、无私奉献的道德水准来要求自己。以精益求精的工作作风，任劳任怨的工作态度；以极度的热忱投入到教书育人的工作之中，全心全意做好教育教学工作。</p>
+                    </div>
+                                        <div class="onetea">
+                        <dl class="clearfix">
+                            <dt class="fll"><img src="images/14665859207980.png" alt="" width="150" height="150"></dt>
+                            <dd class="fll"><a href="javascript:void(0)" class="orange ft20 padding_r15 padding_l5">仝现标</a>| <span class="padding_l10">特级教师</span></dd>
+                        </dl>
+                        <p>仝现标，毕业于曲阜师范大学。山东省郓城县第一初级中学物理教师，物理学科带头人，郓城县优秀教师，县骨干教师，菏泽市教学能手。勤奋敬业，持之以恒，追求卓越，无私奉献。人生格言：诚挚的心灵，是学生情感的钥匙，高尚的师德，是学生心灵的明镜。</p>
+                    </div>
+                                        <div class="onetea">
+                        <dl class="clearfix">
+                            <dt class="fll"><img src="images/14665859729223.png" alt="" width="150" height="150"></dt>
+                            <dd class="fll"><a href="javascript:void(0)" class="orange ft20 padding_r15 padding_l5">王金敏</a>| <span class="padding_l10">特级教师</span></dd>
+                        </dl>
+                        <p>王金敏毕业于吉林师范大学，获教育学学士学位，英语六级。第一初级中学英语教师兼班主任，英语学科带头人。工作认真踏实、勤奋刻苦、任劳任怨，在教育教学中因材施教、勇于探索、敢于创新，取得了可喜的成绩，多次获县、市优秀教师称号。人生格言是：诚挚的心灵，是学生情感的钥匙，高尚的师德，是学生心灵的明镜。</p>
+                    </div>
+                                        <div class="onetea">
+                        <dl class="clearfix">
+                            <dt class="fll"><img src="images/14665860844417.png" alt="" width="150" height="150"></dt>
+                            <dd class="fll"><a href="javascript:void(0)" class="orange ft20 padding_r15 padding_l5">张洪国</a>| <span class="padding_l10">特级教师</span></dd>
+                        </dl>
+                        <p>张洪国，毕业于曲阜师范大学，汉语言文学专业。山东省郓城县第一初级中学语文教师，语文学科带头人，语文组教研组长。忠于职守，勤奋敬业，甘于奉献，为人师表。以精益求精的工作作风，兢兢业业的工作态度，在传统中求创新，在创新中求发展，在发展中求完善。</p>
+                    </div>
+                                        <div class="onetea">
+                        <dl class="clearfix">
+                            <dt class="fll"><img src="images/14665862152980.png" alt="" width="150" height="150"></dt>
+                            <dd class="fll"><a href="javascript:void(0)" class="orange ft20 padding_r15 padding_l5">张韦强</a>| <span class="padding_l10">特级教师</span></dd>
+                        </dl>
+                        <p>张韦强 ，从事初中数学教学20余年，勤恳敬业，获全国优质课大赛一等奖，山东教学能手，省、市级骨干教师，省、市级优质课比赛一等奖；全国初中数学联赛优秀辅导员，全国初中数学奥林匹克优秀指导教师；参与《动感设计》(中学数学教学参考杂志社)、《初中数学纠错实用宝典》(中学数学教学参考杂志社)、《三维中考》(北师版)(山西电子音像出版社)、《三维教案》等20多本图书编写，任主编、副主编，参与人教版、北师版、青岛版的教辅材料及配套教学资源(光盘、课件)的制作；在《中学数学教学参考》（国家核心期刊）、《数学教学通讯》、《课程导报》、《数学天地》、《中学生报》、《学习报》、《学周刊》《考试报》、《升学指导报》、《求知报》、《数学辅导报》、《学生新报》、《学习周报》、《新课程》等多家报社发表文章100多篇，任《中学数学教学参考》、《学周刊》、《学习报》、《中学生导报》特约编辑。</p>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+            </div>
+</section>
+<div id="div_zhezhao" style="display: none;" class="div_zhezhao"></div>
+<script type="text/javascript">
+  var alldata = '';
+  //总金额
+  var total_price = 0;
+  //优惠价格
+  var youhui_price = 0;
+  var sess_uid = '';
+  $(document).ready(function(){
+    $('input:radio[name="grade"]').change(function () {
+      var grade = this.value;
+      $.each(alldata,function(i,v){
+        if(grade == i)
+        {
+            $("#introduce").html("");
+            $("#heji").hide();
+            $("#courseCon").html("");
+            if(typeof(v.info) != "undefined" ){
+                //添加介绍
+                var ins = "<li><span>"+v.info.title+"</span>, <span class=\"color_9\">课节数:</span> <span class=\"orange ft14\">"+v.info.subject_count+"</span> <span class=\"color_9\">原价:</span> <span class=\"orange line-thr\">￥"+v.info.price_old+"</span> <span class=\"color_9\">优惠价:</span> <span class=\"red2 fw\">￥"+v.info.price+"</span> </li>";
+                $("#introduce").html(ins);
+                var hiddens = "<input id='goodsid"+v.info.id+"' type='hidden' name='goodsids[]' value='"+v.info.id+"' />";
+                $("#introduce").append(hiddens);
+                total_price = v.info.price;
+                youhui_price = v.info.price_old - v.info.price;
+                $("#heji").show();
+                $("#total_price").html(total_price);
+                $("#youhui_price").html("共为您节省￥"+youhui_price);
+            }
+            if(typeof(v.wenli) != "undefined" ){
+                //科目
+                var htmls = '';
+                $.each(v.wenli,function(d,m){
+                    htmls += "<li><input name=\"subject[]\" subject_count=\""+m.subject_count+"\" title=\""+m.title+"\" price=\""+m.price+"\" price_old=\""+m.price_old+"\" type=\"checkbox\" id=\"subject"+m.id+"\" value=\""+ m.id +"\" /><label for=\"subject"+m.id+"\"/>" + m.wenli_name + "</label></li>";
+                });
+                $("#courseCon").html(htmls);
+            }
+            if(typeof(v.subject) != "undefined" ){
+                //科目
+                var htmls = '';
+                $.each(v.subject,function(d,m){
+                    htmls += "<li><input name=\"subject[]\" subject_count=\""+m.subject_count+"\" title=\""+m.title+"\" price=\""+m.price+"\" price_old=\""+m.price_old+"\" type=\"checkbox\" id=\"subject"+m.id+"\" value=\""+ m.id +"\" /><label for=\"subject"+m.id+"\"/>" + m.subject_name + "</label></li>";
+                });
+                $("#courseCon").html(htmls);
+            }
+            
+        }
+      });
+    });
+    //radio
+    //
+    $('body').on('change', 'input:checkbox[name=\"subject[]\"]',function(e) {
+        var ins_id = $(this).val();
+        var ins_price = $(this).attr("price");
+        var ins_price_old = $(this).attr("price_old");
+        if (this.checked) {
+            var lengs = $("input[type=checkbox][name='subject\[\]']:checked").length;
+            if(parseInt(lengs) == 1)
+            {
+                $("#introduce").html("");
+                total_price = 0;
+                youhui_price = 0;
+            }
+            var ins_title = $(this).attr("title");
+            var subject_count = $(this).attr("subject_count");
+            //添加介绍
+            var ins = "<li id='il"+ins_id+"'><span>"+ins_title+"</span>, <span class=\"color_9\">套课数:</span> <span class=\"orange ft14\">"+subject_count+"</span> <span class=\"color_9\">原价:</span> <span class=\"orange line-thr\">￥"+ins_price_old+"</span> <span class=\"color_9\">优惠价:</span> <span class=\"red2 fw\">￥"+ins_price+"</span> </li>";
+            $("#introduce").append(ins);
+            var hiddens = "<input id='goodsid"+ins_id+"' type='hidden' name='goodsids[]' value='"+ins_id+"' />";
+            $("#introduce").append(hiddens);
+            total_price = parseInt(total_price) + parseInt(ins_price);
+            youhui_price = parseInt(youhui_price) + (parseInt(ins_price_old) - parseInt(ins_price));
+            $("#heji").show();
+            $("#total_price").html(total_price);
+            $("#youhui_price").html("共为您节省￥"+youhui_price);
+        }
+        else {
+            total_price = parseInt(total_price) - parseInt(ins_price);
+            youhui_price = parseInt(youhui_price) - (parseInt(ins_price_old) - parseInt(ins_price));
+            if(isNaN(youhui_price)){
+                youhui_price = 0;
+            }
+            $("#total_price").html(total_price);
+            $("#youhui_price").html("共为您节省￥"+youhui_price);
+            $("#il"+ins_id).remove();
+            $("#goodsid"+ins_id).remove();
+        }
+    });
+    $("#course-buy").click(function(){
+        var goodsids = '';
+        $('input:hidden[name="goodsids[]"]').each(function(){
+            if($(this).val()!=''){
+                goodsids += $(this).val();
+            }
+        });
+        if(goodsids == '')
+        {
+            alert("请选择课程");
+            return false;
+        }
+        else{
+            $("#kechengbuy").submit();
+        }
+        
+    });
+    $("#searchbtn").click(function(){
+        var stitle = $("#title").val();
+        if(stitle == '')
+        {
+            alert("请填写课程名称");
+            return false;
+        }
+        else{
+            $("#search").submit();
+        }
+    });
+    
+    //checkbox
+  });
+  function checkAll(obj){
+      $('input:checkbox[name="subject[]"]').prop('checked', $(obj).prop('checked'));
+  }
+  $("#goods_buy").click(function () {
+    if(sess_uid == '')
+    {
+        alert('请登录');
+        window.location="http://member.tongyi.com/index.php/login/";
+        return false;
+    }
+    else{
+        $.get('http://www.tongyi.com/index.php/elite/getBuyInfo',{school_id:5},function(data){
+          alldata = data;
+        },'json');
+        $("#div_zhezhao").show();
+        $("#show_buy").show();
+    }
+    
+  });
+  $("#close01").click(function () {
+    $("#div_zhezhao").hide();
+    $("#show_buy").hide();
+  });
+</script><div class="mask-layer pabs"></div>
+<footer>
+    <div class="contain footer">
+        <p class="l1">
+            <a href="http://www.tongyi.com/index.php/about/" target="_blank">统一教育网简介</a> | <a href="http://www.tongyiedu.com" target="_blank">统一教育集团</a> |
+            <a href="http://member.tongyi.com/index.php/service/pay/" target="_blank">服务价格说明</a> | <a href="http://www.tongyi.com/index.php/about?ln=val" target="_blank">产品价值</a> |
+            <a href="http://www.tongyi.com/index.php/about?ln=corp" target="_blank">合作企业</a> | <a href="http://www.tongyi.com/index.php/about?ln=zp" target="_blank">人才招聘</a> |
+            <a href="http://www.tongyi.com/index.php/about?ln=cprt" target="_blank">版权声明</a> | <a href="http://www.tongyi.com/index.php/about?ln=contact" target="_blank">联系我们</a> |
+            <a href="http://agent.tongyi.com/agent-test/login.php" target="_blank">财富系统</a> |
+            <a href="http://www.tongyi.com/alliance/index.php" target="_blank">联盟合作</a> | <a href="http://www.tongyi.com/sitemap/" target="_blank">网站地图</a> | 
+            <a href="http://www.tongyi.com/index/indexold">返回旧版</a>
+        </p>
+        <div class="hzyx"><img src="images/img-hzyx.png" alt=""></div>
+        <p class="l2">
+            <a href="http://www.syhnyx.cn" target="_blank">沈阳市浑南区第一小学</a> | <a href="http://www.zyxschool.com/21" target="_blank">济南市长清第一中学</a> |
+            <a href="http://www.lnssyzx.cn" target="_blank">辽宁省实验中学</a> | <a href="http://www.qhfzyf100.com/" target="_blank">清华大学附属中学永丰学校</a> |
+            <a href="http://www.dl103gz.com" target="_blank">大连市一0三中学</a> | <a href="http://www.zyxschool.com/114" target="_blank">吉林省永吉实验高级中学</a> |
+            <a href="http://www.lzsy100.com" target="_blank">莱州市双语学校</a> | <a href="http://www.zhsy100.com" target="_blank">攀枝花市实验学校</a>
+        </p>
+        <p class="l2">
+            <a href="http://www.qhzhxy.com" target="_blank">清华大学附属中学秦汉学校</a> |
+            <a href="http://www.sy50.cn" target="_blank">沈阳市第五十中学</a> | <a href="http://www.syhnyz.cn" target="_blank">沈阳市浑南一中</a> |
+            <a href="javascript:void(0)">大东区教育局</a> | <a href="http://www.zyxschool.com/917" target="_blank">沈阳市第二中学</a> |
+            <a href="http://www.zyxschool.com/474" target="_blank">沈阳市浑南区第五小学</a> | <a href="http://www.syddsx.com" target="_blank">沈阳市大东区大东路第三小学</a> |
+            <a href="javascript:void(0)">沈阳市第二十七中学</a>
+        </p>
+        <p class="l2">
+            <a href="http://www.dl108.cn" target="_blank">大连市一0八中学</a> |
+            <a href="javascript:void(0)">沈阳市第二十四中学</a> | <a href="javascript:void(0)">大连市普通高中创新实践学校</a> |
+            <a href="http://www.zyxschool.com/563" target="_blank">吉林省榆树市第二实验中学</a> | <a href="javascript:void(0)">榆树市第一高级中学</a> |
+            <a href="http://www.zyxschool.com/530" target="_blank">吉林市松花江中学</a> | <a href="javascript:void(0)">吉林市第二十五小学</a> |
+            <a href="javascript:void(0)">更多</a>
+        </p>
+        </p>
+        <p class="l3 margin_t15">信息网络传播视听节目许可证号:0108232 | 网站视频由中国青少年广播网提供托管及播放服务</p>
+        <p class="l3">京公网安备110101002611号 | 京ICP证110556| 京公网安备110105002037号| ICP证:B-2-4-20080039号 | 增值电信业务许可证Copyright © 2008 - 2016中国统一教育网</p>
+        <p class="l3">质量管理体系认证：GB/T19001-2008/ISO9001:2008     环境管理体系认证：GB/T24001-2004/ISO14001:2004    健康管理体系认证：GB/T28001-2011/OHSAS18001:2007</p>
+        <div class="tongyi-bm"><a href="http://www.tongyi.com/"><img src="images/tongyi-bm.png" alt=""></a></div>
+    </div>
+</footer>
+<!--百度统计-->
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F43b9f5421e32c34d851f93027a047f0b' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<!--友盟-->
+<div style="display:none">
+<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1259401831'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1259401831' type='text/javascript'%3E%3C/script%3E"));</script>
+</div>
+</body>
+</html>
