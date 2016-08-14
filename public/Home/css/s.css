@@ -1,0 +1,157 @@
+@CHARSET "UTF-8";
+
+.lig_hbwk {
+
+	width: 100%;
+
+	overflow: hidden;
+
+	background-color: #fafafa;
+
+}
+
+.lig_hbwkdh {
+
+	height: 50px;
+
+	line-height: 47px;
+
+	background: url(images/lig_xflxx.png) no-repeat;
+
+	background-position: left 50%;
+
+	background-size: 5% auto;
+
+}
+
+.lig_hbwkdh:hover {
+
+	background-color: #fff;
+
+}
+
+.lig_xxian {
+
+	letter-spacing: -1px;
+
+	color: #cccccc;
+
+}
+
+.shareCon {
+
+	float: left;
+
+	border: 1px solid #eeeeee;
+
+	background-color: #f7f7f7;
+
+	width: 215px;
+
+	height: 47px;
+
+	margin-top: 1px;
+
+	line-height: 47px;
+
+}
+
+.shareCon .fx {
+
+	float: left;
+
+	padding: 0 12px;
+
+	color: #aaaaaa;
+
+	margin-top:-3px
+
+}
+
+.shareCon .jiathis_style_32x32 {
+
+	float: left;
+
+	margin-top: 3px;
+
+}
+
+.shareCon .jiathis_style_32x32 .jtico, .shareCon .jiathis_style_32x32 .jtico:hover {
+
+	background: url(images/index_nex_icons.png) no-repeat 0px -23px;
+
+	width: 28px !important;
+
+	height: 28px !important;
+
+	padding: 0 !important;
+
+	margin: 2px 6px 0 0;
+
+}
+
+.shareCon .jiathis_style_32x32 .jtico_tsina, .shareCon .jiathis_style_32x32 .jtico_tsina:hover {
+
+	background-position: 0 -23px;
+
+}
+
+.shareCon .jiathis_style_32x32 .jtico_qzone, .shareCon .jiathis_style_32x32 .jtico_qzone:hover {
+
+	background-position: -36px -23px;
+
+}
+
+.shareCon .jiathis_style_32x32 .jtico_tqq, .shareCon .jiathis_style_32x32 .jtico_tqq:hover {
+
+	background-position: -73px -23px;
+
+}
+
+.shareCon .jiathis_style_32x32 .jtico_weixin, .shareCon .jiathis_style_32x32 .jtico_weixin:hover {
+
+	background-position: -109px -23px;
+
+}
+
+.jiathis_style_32x32 .jtico:hover {
+
+	opacity: 0.8;
+
+}
+
+.jiathis_style_32x32 .jiathis_txt {
+
+	float: left;
+
+	font-size: 22px;
+
+	text-decoration: none;
+
+	line-height: 32px!important;
+
+}
+
+.jiathis_style_32x32 .jiathis_separator {
+
+	display: block;
+
+	float: left;
+
+	margin: 0 5px;
+
+	line-height: 32px!important;
+
+}
+
+.jiathis_style_32x32 .jialike {
+
+	position: relative;
+
+	border: none;
+
+	overflow: hidden;
+
+	margin: -3px 5px;
+
+}

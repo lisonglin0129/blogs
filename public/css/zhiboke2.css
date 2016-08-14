@@ -1,0 +1,1204 @@
+/* common */
+html, body {font-family: '微软雅黑',"Microsoft YaHei", "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif!important;}
+ul,li,h3{ margin:0;padding:0;list-style:none;}
+a{ color:#666;cursor: pointer; text-decoration:none; }
+a:hover,a:link,a:visited,a:active{ color:#666;text-decoration:none;}
+.clear{ width:100%;float:left;height:51px;  }
+.fll { float: left; display: inline; }
+.flr { float: right; display: inline; }
+.tac{ text-align: center; }
+.tal{ text-align: left; }
+.tar{ text-align: right; }
+.mt10{ margin-top: 10px; }
+.mt20{ margin-top: 20px; }
+.mt40{margin-top: 40px;}
+.mt50{ margin-top: 50px; }
+.mt120{ margin-top: 120px; }
+.mb10{ margin-bottom: 10px; }
+.mr10{ margin-right: 10px; }
+.mb20{ margin-bottom: 20px; }
+.m20{ margin: 20px 0; }
+.m50{ margin: 50px 0; }
+.row5{margin-left: -5px;margin-right: -5px;}
+.p0{padding: 0}
+.plr5{padding: 0 5px}
+.p20{ padding: 20px 0; }
+.pb80{ padding-bottom: 80px; }
+.pabs { position: absolute; }
+.prel { position: relative; }
+.np { white-space: nowrap; }
+.cur-p{ cursor: pointer;}
+
+/*icon*/
+.ico-play{
+    background: url(../images/icon.png) 0 -4px;
+    display: inline-block;
+    width: 13px;
+    height: 14px;
+    margin-right:  5px;
+}
+.ico-user{
+    background: url(../images/icon.png) -20px -4px;
+    display: inline-block;
+    width: 13px;
+    height: 14px;
+    margin-right:  5px;
+}
+.ico-userlist{
+    background: url(../images/icon.png) -110px -29px;
+    display: inline-block;
+    width: 21px;
+    height: 21px;
+    margin-right:  5px;
+}
+.ico-userlist2{
+    background: url(../images/icon.png) -110px -3px;
+    display: inline-block;
+    width: 21px;
+    height: 21px;
+    margin-right:  5px;
+}
+.ico-refresh{
+    background: url(../images/icon.png) -87px -32px;
+    display: inline-block;
+    width: 21px;
+    height: 21px;
+    margin-right:  5px;
+    margin-bottom: -5px;
+}
+.ico-down{
+    background: url(../images/icon.png) -55px -30px;
+    display: inline-block;
+    width: 21px;
+    height: 21px;
+    margin-right: 10px;
+    vertical-align: -5px;
+}
+.ico-teacher{
+    background: url(../images/icon.png) -39px -5px;
+    display: inline-block;
+    width: 12px;
+    height: 14px;
+    margin-right:  5px;
+}
+.ico-playing{
+    background: url(../images/icon.png) 0 -30px;
+    display: inline-block;
+    width: 23px;
+    height: 23px;
+    line-height: 50px;
+    margin-top:10px;
+}
+.ico-share{
+    background: url(../images/icon.png) -58px -2px;
+    display: inline-block;
+    width: 16px;
+    height: 17px;
+    margin-right:10px;
+}
+.ico-admin{
+    background: url(../images/icon.png) -2px -62px;
+    display: inline-block;
+    width: 16px;
+    height: 18px;
+    margin-right:5px;
+    margin-bottom: -3px;
+}
+.ico-member{
+    background: url(../images/icon.png) -21px -62px;
+    display: inline-block;
+    width: 16px;
+    height: 18px;
+    margin-right:5px;
+    margin-bottom: -3px;
+}
+.ico-silent{
+    background: url(../images/icon.png)  -40px -62px;
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    margin-right:5px;
+    margin-bottom: -3px;
+}
+/*header*/
+.top-bar{
+    height: 55px;
+}
+.top-bar,.top-bar a{
+    color: #666;
+    line-height: 55px;
+    font-size:12px ;
+    padding: 0 20px;
+}
+.top-bar a{
+    padding: 0 5px;
+}
+hr{border-bottom: 2px solid #eee;margin: 0}
+
+.topCon-left{width: 430px;height: 38px;line-height: 38px;color: #c4c4c4}
+.topCon-left a{color: #c4c4c4}
+.topCon-right{width: 700px;height: 38px;text-align: right}
+.topCon-right div{line-height: 38px;color: #c4c4c4}
+.topCon-right .top-link{padding-left: 30px;}
+.topCon-right .top-link a{padding: 0 10px;color: #c4c4c4}
+.topCon-right .top-link .specialColor{color: #f90;}
+.topCon-right .top-user a{color: #c4c4c4;padding-right: 10px;}
+/*资源中心---H&M 6-14*/
+/*breadcrumb-面包屑*/
+.crumb{
+    padding: 10px;
+    color: #999;
+    font-size: 14px;
+}
+.crumb span a{
+    padding: 0 3px;
+    line-height: 24px;
+    color: #333;
+}
+.pagination>li>a, .pagination>li>span {
+    margin: 0 5px;
+    border-radius: 3px;
+    color: #666;
+}
+.pagination>li>a:hover {
+    background-color: #379be9;
+    color: #fff;
+}
+
+/*直播列表-livelist*/
+.filter{  border: 1px solid #eee;  padding:0 10px;  }
+.filter .line{  border-top: 1px dashed #eee;}
+.filter .sel_teacher_row1{line-height: 30px;padding: 5px;}
+.filter .sel_teacher_row1 dl{margin: 5px 0}
+.filter .sel_teacher_row1 dl dt{line-height: 30px; text-align:left;float: left;color: #999;padding-right: 30px;}
+.filter .sel_teacher_row1 dl dd{float: left;line-height: 30px; }
+.filter .sel_teacher_row1 dl dd a{display: inline-block;margin: 2px 15px; -webkit-border-radius:3px; -moz-border-radius:3px; border-radius:3px;color:#666;}
+.filter .sel_teacher_row1 dl dd a:hover{color: #ff9900}
+.filter .sel_teacher_row1 dl dd .hover{color: #ff9900}
+
+.sort{
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    line-height: 42px;
+    background-color: #eee;
+    color: #333;
+    font-size: 14px;
+}
+.sort a {
+    padding: 11px 30px 12px;
+}
+.sort .nav>li>a {
+    padding: 12px 15px;
+}
+.sort .nav-tabs>li.active>a,.sort .nav-tabs>li.active>a:focus,.sort .nav-tabs>li.active>a:hover {
+     border: none;
+}
+.sort .nav-tabs>li.active>a,.sort .nav-tabs>li.active>a:focus,.sort .nav-tabs>li.active>a:hover {
+    color: #ff9900;
+    border-bottom-color:#ddd
+}
+.sort .nav-tabs {
+    border-bottom: none;
+}
+.sort .nav-tabs>li {
+    margin-bottom: 0;
+}
+
+.sort .nav-tabs>li>a {
+    margin-right: 0;
+    border-radius: 0;
+    border: 0;
+}
+.sort .active{
+    background: #fff;
+    color: #ff9900;
+}
+.sort .caret-up,.sort .caret-down{
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 2px;
+    vertical-align: middle;
+    border-bottom: 4px dashed;
+    border-bottom: 4px solid\9;
+    border-right: 4px solid transparent;
+    border-left: 4px solid transparent;
+}
+.sort .caret-down{
+    border-bottom: none;
+    border-top: 4px dashed;
+    border-top: 4px solid\9;
+}
+.hot-title{
+    text-align: center;
+    font-size: 24px;
+    color: #333;
+    padding: 0 15px 15px;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 10px;
+}
+.hot-title span{
+    color: #ff9900;
+}
+.live-list-left{
+    width: 80%;
+    float: left;
+}
+.live-list-right{
+    width: 20%;
+    float: left;
+}
+.live-list-box{
+    margin: 5px 0;
+    border: 1px solid #eee;
+}
+.live-list-box:hover{
+    opacity: 0.8;
+}
+.live-list-box .hot-info{
+    margin: 8px;
+    height: 20px;
+    overflow: hidden;
+}
+.live-list-box .box-top{
+    position: relative;
+}
+.live-list-box .box-top .time{
+    position:absolute;
+    bottom:0;
+    width: 100%;
+    background-color: #000;
+    opacity: 0.6;
+    color: #fff;
+    font-size: 12px;
+    padding: 5px;
+}
+.live-list-box .box-top .living{
+    position:absolute;
+    top:0;
+    left: 0;
+    background-color: #f36957;
+    color: #fff;
+    padding: 5px 10px;
+}
+.live-list-box .box-top .tag {
+    position:absolute;
+    top:0;
+    left: 0;
+    color: #fff;
+    padding: 5px 10px;
+}
+.live-list-box .box-top .living{
+    background-color: #f36957;
+}
+.live-list-box .box-top .coming{
+    background-color: #12c3fd;
+}
+.live-list-box .box-bottom{
+    padding: 5px;
+}
+.live-list-box .box-bottom h4{
+    color: red;
+    font-size: 16px;
+    float: left;
+    margin: 5px 0;
+}
+.live-list-box .box-bottom p{
+    width: 100%;
+    float: left;
+    font-size: 13px;
+    color: #333;
+    padding: 0 5px;
+    line-height: 20px;
+    height: 20px;
+    overflow: hidden;
+}
+.live-list-box .box-bottom span{
+    font-size: 13px;
+    margin: 5px 0;
+    color: #999;
+}
+.live-list-box .box-bottom span a{
+    color: #ff9900;
+}
+
+/*直播目录 -liveInfo*/
+
+.live-info-top .live-pic{
+    width: 100%;
+}
+.live-info-top .appdown{
+    position: absolute;
+}
+.live-info-top .appdown img{
+    display: none;
+    position: relative;
+    top:35px\9;
+    right: 150px\9;
+    z-index: 99;
+    background-color: #eee;
+    padding: 5px;
+}
+.live-info-top span{
+    margin: 10px 0;
+}
+.live-info{
+    padding: 10px;
+}
+.live-info h4{
+    font-size: 24px;
+    color: #000;
+    margin-top:0;
+}
+.live-info .price{
+    background-color: #eee;
+    padding: 10px 20px;
+    margin: 10px 0;
+	line-height:41px;
+}
+.live-info .price span{
+    font-size: 32px;
+    color: #ff5500;
+    padding: 0 10px;
+	vertical-align:top;
+	line-height:41px;
+}
+.live-info ul{
+    margin: 10px 0;
+}
+.live-info ul li{
+    font-size: 14px;
+    color: #333;
+    line-height: 28px;
+}
+.live-info ul li i{
+    background: url(../images/icon.png) -80px -1px;
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    margin-right:5px;
+}
+.live-info li span{
+    color: #999;
+    padding: 0 20px;
+}
+.live-info li a{
+    padding: 2px 20px;
+    background-color: #eee;
+    line-height: 24px;
+    margin: 2px 10px;
+    border-radius: 3px;
+    display: inline-block;
+}
+.live-info .button{
+    margin: 10px 0;
+}
+.live-info .buy{
+    font-size: 18px;
+    font-weight: 300 !important;
+    color: #fff;
+    cursor: pointer;
+    outline: none;
+    padding: 15px 80px;
+    background: #ff9900;
+    border: none;
+    border-radius: 2px;
+    text-transform: uppercase;
+}
+.live-info .btn-live{
+    background-color: #8dcb44;   /*立即直播*/
+    border: 1px solid #8dcb44;
+}
+.live-info .btn-none{
+    background-color: #aaa;     /*暂无直播*/
+    border: 1px solid #aaa;
+}
+.live-info .order {
+    font-size: 18px;
+    font-weight: 300 !important;
+    color: #ff5500;
+    cursor: pointer;
+    outline: none;
+    padding: 15px 40px;
+    border: 1px solid #ff9900;
+    background: #fff5e5;
+    border-radius: 2px;
+    text-transform: uppercase;
+}
+.live-info .modal-title {
+    text-align: center;
+    font-size: 18px;
+}
+.live-info .modal-body{
+    height: 335px;
+}
+.live-info .modal-body .form-control, .live-info .modal-body .btn{
+    height: 50px;
+}
+.live-info .modal-body .btn-code{
+    background-color: #8dcb44;
+    color: #fff;
+}
+.live-info .buy:hover ,.live-info .order:hover {
+    opacity: 0.8;
+}
+@media (min-width: 768px) {
+    .modal-dialog {
+        width: 500px;
+        margin: 20% auto;
+    }
+}
+@media (max-width: 768px) {
+    .live-list-left{
+        width: 100%;
+        float: left;
+    }
+    .live-list-right{
+        width: 100%;
+        float: left;
+    }
+    .live-info .buy,.live-info .order{
+        width: 49%;
+        padding: 15px 20px;
+        float: left;
+        margin-right: 1%;
+    }
+    .sort a {
+        padding: 11px 10px;
+    }
+    .live-info-top .appdown img {
+        position: relative;
+        top: 5px;
+        left: 80px;
+    }
+    .live-right-bar .crumb {
+        margin-top:10px;
+        padding: 0 10px;
+    }
+    .live-right-bar .crumb span a{
+        font-size: 20px;
+    }
+}
+.live-info .next-live{
+    font-size: 16px;
+    color: #ff5500;
+    padding: 0 20px;
+}
+.live-info .next-live i{
+    background: url(../images/icon.png) -30px -33px;
+    display: inline-block;
+    width: 16px;
+    height: 20px;
+    margin-bottom:-4px;
+    margin-right:5px;
+}
+.live-info-detail .title {
+    width: 100%;
+    background-color: #f4f4f4;
+}
+.live-info-detail .nav-tabs>li>a {
+    border-radius: 0;
+    margin-right: -1px;
+    color: #333;
+}
+.live-info-detail .title ul li a {
+    float: left;
+}
+.live-info-detail .nav-tabs {
+    border-bottom: none;
+    margin-left: -1px;
+    padding: 0;
+}
+.live-info-detail .title ul li a {
+    float: left;
+    line-height: 32px;
+    width: 140px;
+    text-align: center;
+    border-top:3px solid transparent;
+    border-right: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+}
+.live-info-detail .nav-tabs>li.active>a,.live-info-detail .nav-tabs>li.active>a:focus,.live-info-detail .nav-tabs>li.active>a:hover {
+    color: #333;
+    cursor: default;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-bottom-color: transparent;
+    border-top:3px solid #4aa9ea;
+}
+.live-info-detail .title ul li a:hover {
+     border-top:3px solid #4aa9ea;
+ }
+.live-info-detail .information{
+    color: #666;
+    text-indent: 2em;
+    line-height: 28px;
+}
+.live-info-detail .information img{
+    width: 100%!important;
+}
+.live-info-detail .comment,.live-info-detail .catalog,.live-info-detail .information{
+    padding: 15px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-top:none;
+    min-height: 200px;
+}
+.live-info-detail .comment .filter{
+    padding: 10px;
+    width: 100%;
+    background-color: #f3fdff;
+}
+.live-info-detail .comment .filter .percent{
+    text-align: center;
+    font-size: 12px;
+    float: left;
+    _display: inline;
+    margin: 0 20px;
+}
+.live-info-detail .comment .filter .percent span{
+    display: block;
+    font-size: 19px;
+    line-height: 19px;
+    padding: 5px 0 2px 0;
+    zoom: 1;
+    color: #ff5500;
+}
+.live-info-detail .comment .filter p span{
+    float: left;
+    color: #ff9900;
+    font-size: 20px;
+}
+.live-info-detail .comment .filter .radio{
+    line-height: 30px;
+    float: left;
+}
+.live-info-detail .comment .filter input[type=radio] {
+    position: absolute;
+    margin-top: 8px;
+    margin-left: -20px;
+}
+ .radio label {
+    margin-left: 10px;
+}
+.live-info-detail .comment-info{
+    padding: 15px;
+}
+.live-info-detail .comment-info .media{
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+.live-info-detail .comment-info .media-body p{
+   font-size: 14px;
+    color: #4aa9ea;
+}
+.live-info-detail .comment-info .media-body span{
+   font-size: 12px;
+    color: #999;
+}
+.live-info-detail .comment-info a img{
+    border-radius: 50%;
+    margin: 0 20px;
+    width: 64px;
+    height: 64px;
+}
+.live-info-detail .comment-info a img:hover{
+   opacity: 0.8;
+}
+.live-info-detail .comment-area{
+    width: 100%;
+    float: left;
+    padding: 20px 0;
+    border-bottom: 1px solid #eee;
+}
+.live-info-detail .comment-area h4{
+    color: #4aa9ea;
+}
+.live-info-detail .comment-area span,.live-info-detail .comment-area .radio{
+    margin: 20px 10px;
+    float: left;
+}
+.live-info-detail .comment-area .btn{
+    margin: 10px 0;
+    background-color: #4aa9ea;
+    padding: 10px 30px;
+    color: #fff;
+}
+.live-info-detail .catalog .schedule{
+    background-color: #eee;
+    padding: 20px 0;
+}
+.live-info-detail .catalog .schedule .line:before{
+    width: 80%;
+    height: 5px;
+    background: #ff9900;
+    display: block;
+    content: "";
+    position: absolute;
+    left: 10%;
+    bottom: 0;
+}
+@media(max-width: 768px){
+    .live-info-detail .title ul li a {
+        width: 84px;
+    }
+    .live-info-detail .nav>li>a {
+        padding: 10px 5px;
+    }
+}
+@media(max-width: 992px){
+    .live-info-detail .catalog .schedule .line:before{
+        width: 90%;
+        height: 5px;
+        background: #ff9900;
+        display: block;
+        content: "";
+        position: absolute;
+        left: 5%;
+        bottom: 0;
+    }
+}
+.live-info-detail .catalog .schedule .line{
+    /*border-top:5px solid #ff9900;*/
+    /*width: 80%;*/
+    margin: 0 auto;
+    position: relative;
+}
+.live-info-detail .catalog .schedule h4{
+    margin: 20px 0;
+    font-size: 20px;
+}
+
+.live-info-detail .catalog .schedule .line .time {
+    position: relative;
+    text-align: center;
+    font-size: 14px;
+    float: left;
+    margin: 10px 0;
+}
+.live-info-detail .catalog .schedule .line .time i{
+    width: 15px;
+    height: 15px;
+    border: 3px solid #ff9900;
+    border-radius: 50%;
+    background-color: #fff;
+    position: absolute;
+    top:-20px;
+    left: 22px;
+}
+
+.live-info-detail .catalog .schedule .line .time span{
+    display: block;
+    font-size: 16px;
+    line-height: 16px;
+    padding: 2px 0;
+    zoom: 1;
+    color: #4aa9ea;
+}
+.live-info-detail .catalog ul{
+    border-left: 2px solid #ccc;
+    margin: 10px 0 10px 20px;
+}
+.live-info-detail .catalog ul li{
+    position: relative;
+    clear: both;
+    min-height: 50px;
+    line-height: 50px;
+}
+.live-info-detail .catalog ul li span{
+    margin: 0 15px ;
+    float: right;
+    color: #999;
+}
+.live-info-detail .catalog ul li .point{
+    width: 15px;
+    height: 15px;
+    border: 2px solid #ccc;
+    border-radius: 50%;
+    background-color: #fff;
+    position: absolute;
+    left: -9px;
+    top:17px
+}
+.live-info-detail .catalog ul li .state{
+    line-height: 24px;
+    margin: 13px;
+    padding: 0 10px;
+    color: #fff;
+    background-color: #aaa;
+}
+.live-info-detail .catalog ul li .living{
+    background-color: #f03b3b;
+}
+.live-info-detail .catalog ul li .future{
+    background-color: #95cc55;
+}
+.live-info-detail .catalog ul li:hover{
+    background-color: #f4f4f4;
+}
+.live-info-detail .information p{
+    text-indent: 2em;
+    color: #999;
+}
+.live-info-detail .information img{
+    width: 100%;
+    margin: 5px 0;
+}
+
+/*right-bar*/
+.teacher-box ,.lesson-box{
+    padding: 5px 5px 15px 5px;
+    background-color: #fff;
+    margin-bottom: 20px;
+}
+.teacher-box h4,.lesson-box h4{
+    padding: 5px 10px;
+}
+.teacher-box img{
+    border-radius: 50%;
+    margin: 10px 20px;
+}
+.teacher-box img:hover{
+    opacity: 0.8;
+}
+.teacher-box span{
+    line-height: 80px;
+    margin: 10px 0;
+    color: #ff7700;
+    font-size: 18px;
+}
+.teacher-box .number .line{
+    border-right: 1px solid #eee;
+    border-left: 1px solid #eee;
+}
+.teacher-box .number li{
+    width: 33%;
+    text-align: center;
+    font-size: 14px;
+    float: left;
+    _display: inline;
+}
+.teacher-box .number li span{
+    display: block;
+    font-size: 19px;
+    line-height: 19px;
+    padding: 5px 0 2px 0;
+    zoom: 1;
+    color: #4aa9ea;
+}
+.teacher-lesson img:hover{
+    opacity: 0.8;
+}
+.teacher-lesson p{
+    padding: 5px 0;
+    text-align: center;
+}
+/*直播房间-liveroom*/
+.live-left-bar{
+    position: absolute;
+    width: 200px;
+    height: 100%;
+    border: 1px solid #eee;
+    background-color: #fff;
+    float: left;
+    z-index: 4;
+}
+.live-left-bar  .hidden{
+    display: none!important;
+}
+.live-left-bar .left-btn {
+    position: absolute;
+    top: 50%;
+    right: -11px;
+    display: block;
+    width: 11px;
+    height: 100px;
+    margin-top: -80px;
+    overflow: hidden;
+    background: url(../images/icons-menuclose.png) no-repeat;
+}
+.live-left-bar .left-bar-large{
+    height: 100%;
+}
+.live-left-bar .left-bar-large .left-top{
+    font-size: 16px;
+    padding: 10px 0px;
+    background-color: #4aa9ea;
+    text-align: center;
+    color: #fff;
+}
+.live-left-bar .left-bar-large .title{
+    font-size: 14px;
+    padding: 10px 20px;
+    color: #333;
+    border-bottom: 1px solid #d7dffa;
+    border-top: 1px solid #d7dffa;
+}
+.live-left-bar .left-bar-large .user-list{
+    top:50px;
+    bottom: 230px;
+    position: absolute;
+    overflow: hidden;
+    width: 100%;
+}
+.live-left-bar .left-bar-large .user-list:hover{
+    overflow-y: scroll;
+}
+.live-left-bar .left-bar-large ul li{
+    font-size: 13px;
+    padding: 8px 30px;
+    color: #999;
+	white-space:nowrap;
+	text-overflow:ellipsis
+}
+.live-left-bar .left-bar-large .large-left-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 192px;
+    background: #fff;
+}
+.live-left-bar .left-bar-large .large-left-footer .app-code {
+    padding-top: 10px;
+    text-align: center;
+}
+.live-left-bar .left-bar-large .large-left-footer .btn-down {
+    margin: 9px auto 30px;
+    display: block;
+    width: 134px;
+    height: 34px;
+    background: #ff9900;
+    line-height: 34px;
+    text-align: center;
+    border-radius: 3px;
+    color: #fff;
+}
+.live-left-bar .left-bar-small  .small-nav {
+    width: 60px;
+    font-size: 14px;
+}
+.live-left-bar .left-bar-small  .small-nav i {
+    display: block;
+    margin: 0 auto 3px;
+}
+.live-left-bar .left-bar-small  .small-nav li {
+    margin: 20px 0 35px;
+}
+.live-left-bar .left-bar-small  .small-nav li a{
+    display: block;
+    margin: 20px 0;
+    color: #333;
+    text-align: center;
+}
+.live-left-bar .left-bar-small .small-left-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background: #fff;
+}
+.live-left-bar .left-bar-small .small-left-footer .btn-down {
+    color: #fff;
+    display: block;
+    width: 60px;
+    padding: 10px 0 25px;
+    text-align: center;
+    background: #ff9900;
+    font-size: 12px;
+}
+.live-left-bar .left-bar-small  .small-left-footer i {
+    display: block;
+    margin: 10px auto;
+}
+
+.live-right-bar{
+    position: absolute;
+    float: left;
+    padding: 15px 15px 15px 215px;
+    width: 100%;
+    min-height: 700px;
+    background-color: #eee;
+}
+@media (max-width: 992px){
+    .live-right-bar{
+        padding-left: 0;
+    }
+}
+.live-title {
+    width: 100%;
+    height: 50px;
+    background: -webkit-linear-gradient(left, #7a55be, #48acf0);
+    background: -o-linear-gradient(right, #7a55be, #48acf0);
+    background: -moz-linear-gradient(right, #7a55be, #48acf0);
+    background: linear-gradient(to right, #7a55be, #48acf0);
+}
+.live-title h3{
+    color: #fff;
+    font-size: 18px;
+    padding:15px;
+}
+.live-title .dropdown{
+    line-height: 50px;
+    margin-right: 20px;
+}
+.live-title .dropdown .btn-live{
+    padding: 0 20px;
+    border:0
+}
+.live-title .dropdown-menu {
+     margin: 0;
+     border: none;
+     border-radius: 0;
+}
+.live-title a{
+    color: #fff;
+    font-size: 12px;
+    padding:0 20px;
+    float: left;
+    line-height: 50px;
+}
+.live-box{
+    float: left;
+}
+.live-box-right{
+    float: left;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    position: relative;
+    width: 100%;
+}
+.live-catalog{
+    border-bottom: 1px solid #ddd;
+    padding: 15px;
+}
+.live-catalog .pic img{
+    border-radius: 50%;
+    border: 1px solid #eee;
+    max-width: 70px;
+    max-height: 70px;
+}
+.live-catalog .teacher-info{
+}
+.live-catalog .attention{
+    line-height: 50px;
+    height: 50px;
+}
+.live-catalog .attention a{
+    margin: 15px 0;
+    line-height: 30px;
+    background-color: #379be9;
+    color: #fff;
+    font-size: 12px;
+    padding:5px 20px ;
+    float: right;
+}
+.live-catalog .teacher-info .title{
+    color: #ff7700;
+    font-size: 18px;
+    line-height: 40px;
+    padding:10px 0;
+    margin: 0 auto;
+}
+.live-catalog .teacher-info p{
+    color: #999;
+    font-size: 14px;
+}
+
+.live-bottom-box{
+    width: 100%;
+    padding: 20px;
+}
+.live-bottom-box .title{
+    color:#333;
+    font-size: 20px;
+    padding: 5px 15px;
+    border-radius: 3px;
+}
+.live-bottom-box .title span{
+    color:#ff9900;
+}
+.live-list{
+    margin: 0 auto;
+    width: 100%;
+}
+.live-list .title{
+    background-color: #eee;
+    line-height: 40px;
+}
+.live-list .title a{
+    color: #333;
+    background-color: #fff;
+    line-height: 44px;
+    padding: 9px 30px;
+    font-size: 18px;
+    border-top:1px solid #eee;
+}
+.w-liveplayer-gongpin {
+    position: absolute;
+    top:140px;
+    border-top: 0;
+    background: #fff;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.chatroom-wrapper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: #fff;
+}
+.chat-room {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 3px;
+}
+.chat-room .chat-room-bd {
+    width: 100%;
+    height: 100%;
+}
+.chat-room .scroll-sidebar-area, .chat-room .scroll-sidebar-cont {
+    top: 3px;
+    bottom: 60px;
+    position: absolute;
+    overflow: hidden;
+    width: 100%;
+}
+.chat-room .scroll-sidebar-area, .chat-room .scroll-sidebar-cont:hover {
+    overflow-y: scroll;
+}
+.chat-room .scroll-sidebar-area {
+    display: none;
+    right: 3px;
+    width: 8px;
+    visibility: hidden;
+    z-index: 15;
+}
+.chat-room .scroll-sidebar-area .scroll-sidebar-bar {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: #fefefe;
+}
+.chat-room .scroll-sidebar-area .scroll-sidebar-bar a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 8px;
+    border-radius: 5px;
+    overflow: hidden;
+    background: #dadada;
+    cursor: pointer;
+}
+.chat-room .chatroom-list {
+    padding: 0 10px 2px;
+}
+.chat-room .chatroom-list li {
+    padding-top: 5px;
+    word-break: break-all;
+    word-wrap: break-word;
+    line-height: 22px;
+    width: 100%;
+    border-bottom: 1px solid #fafafa;
+}
+.chat-room .chatroom-list span {
+     font-size: 12px;
+     color: #4aa9ea;
+ }
+.chat-room .chatroom-list p {
+    font-size: 14px;
+    color: #202020;
+}
+.chat-box {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+.chat-room-input {
+    position: relative;
+    height: 50px;
+}
+.chat-room-input .input-box {
+    position: relative;
+    width: 75%;
+    height: 60px;
+    overflow: hidden;
+    padding: 5px 10px 0;
+    background: #fafafa;
+    border: none;
+    border-top: 1px solid #e3e3e3;
+    font-size: 14px;
+    line-height: 25px;
+    color: #202020;
+    resize: none;
+    outline: 0;
+}
+.chat-room-input .input-box-num {
+    display: none;
+    position: absolute;
+    bottom: 2px;
+    right: 84px;
+    font-size: 12px;
+    color: #9b9b9b;
+}
+.chat-room-input .btn-send {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+    width: 25%;
+    height: 60px;
+    background: #379be9;
+    font-size: 14px;
+    line-height: 60px;
+    text-align: center;
+    cursor: default;
+    color: #fff;
+}
+@media(max-width: 768px){
+    .live-box{
+        float: left;
+        margin-left: -5px;
+    }
+    .live-info-detail .catalog ul li span{
+        float: none;
+    }
+    .live-list .title a{
+        background-color: #4aa9ea;
+        color: #fff;
+        line-height: 40px;
+    }
+    .chat-box {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        z-index: 99;
+    }
+    .radio label {
+        margin-left: 10px;
+    }
+    .media-body, .media-left, .media-right {
+        float: left;
+    }
+    .media-body {
+        width: 100%;
+    }
+    .comment-info .media .media-left a img {
+        margin: 0;
+        height: 40px;
+        width: 40px;
+    }
+}
+@media(max-width: 992px){
+    .live-box-right{
+        min-height: 500px;
+    }
+    .teacher-info{
+        padding: 0 5px;
+    }
+    .live-right-bar {
+        padding: 0 5px;
+    }
+}
+/*资源中心--End---H&M 6-14*/

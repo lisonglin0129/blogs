@@ -1,0 +1,97 @@
+/* CSS Document */
+html,body{ height:100%; border:none; padding:0px; margin:0px auto; text-align:center; font-size:12px; color:#000000; background:url(../images/helptu_02.gif) repeat-x top;}
+div,ul,li,img, p, span, h1, h2, h3, h4, h5, h6, h7 { padding:0; margin:0 auto; border:none; font-family:"宋体", Simsun;}
+ul{ list-style-type:none;}
+table,input{ font-size:12px;}
+.ligwaik{ width:800px; height:40px; background-color:#006666; }
+a { color:#4c4c4c; text-decoration:none;}
+a:visited { text-decoration:none;}
+a:hover { text-decoration:underline;}
+.box1:after{display:block;clear:both;content:"";visibility:hidden;height:0;}
+/*---------------------------------最小高度-------------------------------------
+min-height:160px; 
+	height:auto !important; 
+	height:160px;
+	overflow:visible;
+	display:table !important;  overflow:visible;  display:inline;
+	*+height:160px;IE7用
+	a:link
+a:visited
+a:hover
+a { color:#262626; text-decoration:none;}
+a:hover { text-decoration:underline;}
+	<meta http-equiv="x-ua-compatible" content="ie=7" />
+	
+----------------------------------------------------------*/
+.shangtiao { width:960px; height:28px; line-height:28px; color:#4c4c4c; text-align:right; font-size:12px; }
+.shangtiao a { color:#4c4c4c; text-decoration:none; margin-left:4px;}
+.shangtiao a:hover { text-decoration:underline;}
+.shangtiao span { float:left;}
+.logotiao { width:960px; height:101px;}
+.logotiao img { float:left;}
+.logotiao span { float:right;}
+.sousuo { width:960px; height:46px; background:url(../images/helptu_14.gif) repeat-x;}
+.sousuo_1 { width:16px; height:46px; float:left; background:url(../images/helptu_10.gif);}
+.sousuo_2 { width:83px; height:46px; float:left; margin-right:7px;}
+.sousuo_3 { width:331px; height:28px; border:4px solid #F1F1F1; float:left; margin-top:5px; background-color:#FFFFFF;}
+.sousuo_3_1 { width:329px; height:26px; border:1px solid #9EC26F; background-color:#FFFFFF;}
+.sousuo_3_1 img { float:left;}
+.sousuo_3_1 span { float:right;}
+.sousuo_3_2 { width:233px; height:26px; font-size:14px; line-height:26px; border:0px; float:left; padding:0px; margin:0px; color:#666;}
+.sousuo_4 { width:276px; height:46px; float:right; background:url(../images/helptu_16.gif);}
+.zhutik { width:960px; height:auto; margin-top:12px;  display:table !important;  overflow:visible;}
+.zhutikle { width:220px; height:auto; float:left;  display:inline-block;}
+.zhutikle1 { width:203px; height:32px; background:url(../images/helptu_21.gif); padding-left:17px; text-align:left; font-size:14px; font-weight:bold; color:#000333; line-height:32px;}
+.zhutikle2 { width:220px; min-height:353px;	height:auto !important; height:353px;	overflow:visible; background:url(../images/helptu_24.gif); padding-top:15px;}
+.zhutikle2 dl { list-style-type:none; padding:0px; margin:0px;}
+.zhutikle2 dt { padding:0px; margin:0px; width:160px; height:24px; line-height:24px; font-size:14px; color:#5B8900; margin:0px auto 6px auto; padding-left:27px; text-align:left; background:url(../images/zcdhbj.gif);}
+.zhutikle2 dt a { color:#5B8900; text-decoration:none;}
+.zhutikle2 dt a:hover { color:#5B8900; text-decoration:underline;}
+.zhutikle2 dd { padding:0px; margin:0px;}
+.zhutikle2 dd ul { list-style-type:none;}
+.zhutikle2 dd li { width:142px; font-size:12px; height:24px; background:url(../images/zcdhdqbj2.gif); padding-left:35px; line-height:24px; color:#666; text-align:left;}
+.zhutikle2 dd li a {color:#666; text-decoration:none;}
+.zhutikle2 dd li a:hover {color:#666; text-decoration:underline;}
+.zhutikle2 li a { color:#5B8900; text-decoration:none;}
+.zhutikle2 li a:hover { color:#5B8900; text-decoration:underline;}
+#zuocedldq { width:160px; height:24px; line-height:24px; font-size:14px; color:#5B8900; margin:0px auto 6px auto; padding-left:27px; text-align:left; background:url(../images/zcdhbj.gif); font-weight:bold;}
+#zuocedldq a { color:#5B8900; text-decoration:underline;}
+#zuocedldq a:hover { color:#5B8900; text-decoration:underline;}
+
+.zcejfl { width:187px; height:auto; display:table !important;  overflow:visible;}
+.zcejfl ul { list-style-type:none; padding:0px;}
+.zcejfl li { width:142px; font-size:12px; height:24px; background:url(../images/zcdhdqbj2.gif); padding-left:45px; line-height:24px; margin:0px auto 0px auto; color:#666; text-align:left;}
+.zcejfl li a {color:#666; text-decoration:none;}
+.zcejfl li a:hover {color:#666; text-decoration:underline;}
+#zcejfldq { width:auto; height:24px; background:url(../images/zcdhdqbj.gif) no-repeat; padding-left:35px; line-height:24px; margin:0px 0 0 20px; color:#000; text-align:left; font-size:12px; font-weight:bold;}
+#zcejfldq a { color:#000; text-decoration:none;}
+#zcejfldq a:hover { color:#000; text-decoration:none;}
+.zhutikle3 { width:220px; height:7px; background:url(../images/helptu_28.gif); font-size:1px;}
+.zhutikle4 { width:220px; height:97px; margin-top:12px;}
+.zhutikri { width:728px; height:auto; float:right;display:inline;overflow:visible;}
+.zhutikri1 { width:695px; height:32px; background:url(../images/helptu_23.gif); padding-left:33px; text-align:left; font-size:12px; color:#000333; line-height:32px;}
+.zhutikri1 a { color:#000333; font-weight:bold; text-decoration:none;}
+.zhutikri1 a:hover { color:#000333; font-weight:bold; text-decoration:underline;}
+.zhutikri2 { width:728px; min-height:478px;	height:auto !important; height:478px;	overflow:visible; background:url(../images/helptu_25.gif);}
+.zhutikri2 ul { list-style-type:none; margin:0px; padding:0px; padding-top:15px;}
+.zhutikri2 li { width:654px; height:27px; line-height:27px; font-size:14px; color:#333; border-bottom:1px dashed #EFEFEF; margin:0 auto; padding:0px; text-align:left;}
+.zhutikri2 li a { color:#333; text-decoration:none;}
+.zhutikri2 li a:hover { color:#763108; text-decoration:underline;}
+.zhutikri3 { width:728px; height:7px; background:url(../images/helptu_31.gif); font-size:1px;}
+.fenye { width:728px; height:40px; line-height:40px; font-size:12px; line-height:40px; color:#000000;}
+.fenye a { color:#000000; padding:4px 6px; margin-right:10px; border:1px solid #000000; text-decoration:none;}
+.fenye a:hover { color:#000000; padding:4px 6px; margin-right:10px; border:1px solid #000000; text-decoration:underline;}
+.fenye span { padding:4px 6px; margin-right:10px; color:#FFFFFF; font-weight:bold; background-color:#689B06; border:1px solid #689B06;}
+.yeweik { width:960px; height:86px; margin-top:12px; background:url(../images/helptu_35.gif); color:#333; line-height:21px;}
+.yeweik span { font-size:12px; font-family:Arial, Helvetica, sans-serif; line-height:25px;}
+.yeweik_1 { width:10px; height:86px; float:left; background:url(../images/helptu_34.gif);}
+.yeweik_2 { width:940px; height:71px; float:left; background:url(../images/helptu_35.gif); color:#333; line-height:25px; padding-top:15px;}
+.yeweik_2 span { font-size:12px; font-family:Arial, Helvetica, sans-serif; line-height:25px;}
+.yeweik_3 { width:10px; height:86px; float:right; background:url(../images/helptu_38.gif);}
+.jutiyek { width:654px; height:auto; display:table !important;  overflow:visible; line-height:25px; font-size:14px; text-align:left; color:#333; padding:15px;  border-bottom:1px dashed #EFEFEF;}
+.jutiyek h1 { font-size:16px; font-weight:bold; line-height:32px; color:#000000; padding:0px;}
+.rmwenti { width:654px; height:auto; display:table !important; overflow:visible; padding-top:10px;}
+.rmwenti h2 { font-size:14px; line-height:26px; text-align:left; font-weight:bold;}
+.rmwentix { width:654px; height:24px; font-size:14px; line-height:25px; text-align:left; font-weight:normal; color:#5B8900;}
+.rmwentix a { color:#5B8900; text-decoration:none;}
+.rmwentix a:hover { color:#753007; text-decoration:underline;}
